@@ -3,7 +3,8 @@ layout: default
 ---
 
 {% for item in paginator.posts %}
-<a href="{{ item.url }}" style="font-size=1.5em">{{ item.title }}</a><br>
+<a href="{{ item.url }}" style="font-size=1.5em">{{ item.title }}</a>
+<br>
 <small>{{ item.date | date: "%B %-d, %Y" }}</small>
 <p>{{  item.desc }}</p>
 <br>
