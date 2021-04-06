@@ -5,29 +5,20 @@ layout: default
 <script type="text/javascript"> document.title = '{{ page.title }}' </script>
 
 <div>
-        <br>
-        <h1>{{ page.title }}</h1>
-        <small>
-        Zhuang, Linsheng<br>
-        {{ page.date | date: "%B %-d, %Y" }}<br>
-        {% if page.tags %} tags: {% endif %} {% for tag in page.tags %} {{ tag }} {% endfor %}
-        </small>
-        <p>{{ content }}</p>
-        <br>
-        <br>
-        <a href="{{ site.url }}">Home</a>
-        <br>
-        {% if page.lang=="zh" %}
-                <p>引用这篇博客：</p>
-                <p class="citation">Zhuang, Linsheng ({{ page.date | date: "%Y/%m/%d"}}),
-                                               {{ page.title }}, https:/{{ site.baseurl }}{{ page.url }}</p>
-        {% else %}
-                <p>Cite this blog: </p>
-                 <p class="citation">Zhuang, Linsheng ({{ page.date | date: "%b %d, %Y"}}),
-                                               {{ page.title }}, https:/{{ site.baseurl }}{{ page.url }}</p>
-        {% endif %}
-</div>
 
+
+<h1>{{ page.title }}</h1>
+<small>{{ page.date | date: "%-d %B %Y" }}</small>
+{% if page.tags %}
+  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+{% endif %}
+{% if page.author | site.author %}
+  <p class="view">by {{ page.author | default: site.author }}</p>
+{% endif %}
+
+{{content}}
+
+<br>
 
 <script>
 MathJax = {
