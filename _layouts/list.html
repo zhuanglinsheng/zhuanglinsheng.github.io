@@ -1,29 +1,25 @@
 ---
 layout: default
-title: Poems
 ---
 
 <div>
 {% for post in paginator.posts %}
-<h1><a href="{{ post.url }}" style="font-size=1.5em">{{ post.title }}</a></h1>
-<br>
+<a href="{{ post.url }}" style="font-size=1.5em">{{ post.title }}</a><br>
 <small>{{ post.date | date: "%B %-d, %Y" }}</small>
-<p>{{ post.desc }}</p>
+<p>{{  post.desc }}</p>
 <br>
 {% endfor %}
 </div>
 
-<div>
+<div class="buttons">
 {% if paginator.previous_page %}
-<span>
+<span class="button">
 <a href="{{ paginator.previous_page_path }}">[ <- Later ] </a>
 </span>
 {% endif %}
-
 {% if paginator.next_page %}
-<span>
+<span class="button">
 <a href="{{ paginator.next_page_path }}">[ Earlier -> ]</a>
 </span>
 {% endif %}
 </div>
-
