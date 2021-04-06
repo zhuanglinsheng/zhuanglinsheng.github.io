@@ -14,6 +14,10 @@ My research interest is broad, including stochastic modeling, optimization theor
 
 - Email: linsheng.z@u.nus.edu
 
+## Hobbies
+
+- My [poems](https://zhuanglinsheng.github.io/res/poems.html) written in Chinese. 
+
 <br>
 
 <br>
