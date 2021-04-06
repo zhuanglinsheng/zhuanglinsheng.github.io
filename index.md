@@ -17,6 +17,7 @@ My research interest is broad, including stochastic modeling, optimization theor
 ## Hobbies
 
 - My [poems](https://zhuanglinsheng.github.io/res/poems.html) written in Chinese. 
+- My [blogs](https://zhuanglinsheng.github.io/list.html). 
 
 <br>
 
