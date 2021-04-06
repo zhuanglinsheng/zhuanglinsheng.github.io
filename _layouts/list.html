@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+<a href="{{ post.url }}" style="font-size=1.5em">{{ post.title }}</a><br>
+<small>{{ post.date | date: "%B %-d, %Y" }}</small>
+<p>{{  post.desc }}</p>
+<br>
+{% endfor %}
+
+
+<div>
+{% if paginator.previous_page %}
+<span>
+<a href="{{ paginator.previous_page_path }}">[ <- Later ] </a>
+</span>
+{% endif %}
+
+{% if paginator.next_page %}
+<span>
+<a href="{{ paginator.next_page_path }}">[ Earlier -> ]</a>
+</span>
+{% endif %}
+</div>
+
