@@ -1,12 +1,6 @@
 ---
 layout: default
-title: "Compositions"
-use_math: false
-tags: resources
-desc: In this file, I will put my essays here. 
 ---
-
-<br>
 
 2021年03月02日《[突然发现今天过生日](https://zhuanglinsheng.github.io/res/poems/2021-03-02.html)》
 
