@@ -3,7 +3,7 @@ layout: default
 title: Poems
 ---
 
-2021年03月02日《[突然发现今天过生日！！！](https://zhuanglinsheng.github.io/res/poems/2021-03-02.html)》
+2021年03月02日《[突然发现今天过生日](https://zhuanglinsheng.github.io/res/poems/2021-03-02.html)》
 
 2020年12月12日《[赤道上的冬天](https://zhuanglinsheng.github.io/res/poems/2020-12-12.html)》
 
