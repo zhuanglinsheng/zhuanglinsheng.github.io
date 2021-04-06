@@ -6,3 +6,4 @@ show_downloads: false
 description: I am currently a PhD student of National University of Singapore Institute of Operations Research and Analytics (IORA). Here is my <a href="https://zhuanglinsheng.github.io/res/cv/cv2020.pdf">CV (2020)</a>.
 
 paginate: 11
+paginate_path: "/blog/page:num/"
