@@ -289,6 +289,8 @@ Consequently $(Tx_n-x_n)\downarrow 0$.
 
 iii) For any $x\in D$ such that $x_{k_n}\rightharpoonup x$ we have $x\in \text{Fix}(T)$ by Corollary 4.18. Moreover $(x_n)$ is Fejér monotone w.r.t. $\text{Fix}(T)$. Thus, by Proposition 5.5 we have $x_n\rightharpoonup x$. 
 
+<br>
+
 ## 6. $\alpha$-Averaged Operator
 
 **Definition 4.23 ($\alpha$-Averaged Operator)** Let $\emptyset\not=D\subset\mathcal{H}$ and let $T:D\to\mathcal{H}$. Let $\alpha\in(0,1)$. Then $T$ is called $\alpha$-averaged if there exists a non-expansive operator $R:D\to\mathcal{H}$ such that $T = (1-\alpha)\text{Id}+\alpha R$. 
