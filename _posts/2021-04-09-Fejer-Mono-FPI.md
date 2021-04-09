@@ -306,7 +306,7 @@ iii) For any $x\in D$ such that $x_{k_n}\rightharpoonup x$ we have $x\in \text{F
 
 **Definition 4.23 ($\alpha$-Averaged Operator)** Let $\emptyset\not=D\subset\mathcal{H}$ and let $T:D\to\mathcal{H}$. Let $\alpha\in(0,1)$. Then $T$ is called $\alpha$-averaged if there exists a non-expansive operator $R:D\to\mathcal{H}$ such that $T = (1-\alpha)\text{Id}+\alpha R$. 
 
-**Proposition 4.24 (Properties of $\alpha$-Averaged Operator - 1)** Let $\emptyset\not=D\subset\mathcal{H}$ and let $T:D\to\mathcal{H}$. Let $\alpha\in(0,1)$. Then 
+**Proposition 4.24 (Properties of $\alpha$-Averaged Operator - 1)** Let $\emptyset\not=D\subset\mathcal{H}$ and $T:D\to\mathcal{H}$. Let $\alpha\in(0,1)$. Then 
 
 i) If $T$ is $\alpha$-averaged then it is non-expansive. 
 
@@ -314,7 +314,7 @@ ii) If $T$ is non-expansive it is NOT necessarily averaged.
 
 iii) $T$ is firmly non-expansive iff it is $1/2$-averaged. 
 
-**Proposition 4.25 (Properties of $\alpha$-Averaged Operator - 2)** Let $\emptyset\not=D\subset\mathcal{H}$ and let $T:D\to\mathcal{H}$. Let $\alpha\in(0,1)$. Then the following are equivalent 
+**Proposition 4.25 (Properties of $\alpha$-Averaged Operator - 2)** Let $\emptyset\not=D\subset\mathcal{H}$ and $T:D\to\mathcal{H}$. Let $\alpha\in(0,1)$. Then the following are equivalent 
 
 i) $T$ is $\alpha$-averaged. 
 
@@ -349,7 +349,7 @@ $$
 
 Since $\alpha\lambda_n\in[0,1]$ and $\sum_n\alpha\lambda_n(1-\alpha\lambda_n) = +\infty$, the result follows Proposition 5.14. 
 
-**Corollary 5.16 (Special Case: $1/2$-averaged)** Let $T:\mathcal{H}\to\mathcal{H}$ be a firmly non-expansive operator such that $\text{Fix}(T)\not=\emptyset$. Let $(\lambda_n)$ be a sequence in $[0,2]$ such that $\sum_n\lambda_n(2-\lambda_n) = +\infty$ and let $x_0\in\mathcal{H}$. Set $x_{n+1} = x_n +\lambda_n(Tx_n-x_n)$. Then 
+**Corollary 5.16 (Special Case: $1/2$-averaged)** Let $T:\mathcal{H}\to\mathcal{H}$ be a firmly non-expansive operator with $\text{Fix}(T)\not=\emptyset$. Let $(\lambda_n)$ be a sequence in $[0,2]$ with $\sum_n\lambda_n(2-\lambda_n) = +\infty$ and let $x_0\in\mathcal{H}$. Set $x_{n+1} = x_n +\lambda_n(Tx_n-x_n)$. Then 
 
 i) $(x_n)$ is Fejér monotone w.r.t. $\text{Fix}(T)$. 
 
