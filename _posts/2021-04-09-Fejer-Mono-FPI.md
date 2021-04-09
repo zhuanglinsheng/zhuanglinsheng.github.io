@@ -28,6 +28,7 @@ This note summarize the [Section 5.1-5.2](https://link.springer.com/chapter/10.1
 **Definition (Quasi-nonexpansiveness)** For any $\emptyset\not=D\subset\mathcal{H}$, an operator $T:D\to D$ such that $\text{Fix}(T)\not=\emptyset$ is [quasi-nonexpansive](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S144678870001123X) if $\|Tx-p\| \le \|x-p\|$ for all $x\in D$ and $p\in\text{Fix}(T)$. 
 
 **Note.** Non-expansiveness implies quasi-non-expansiveness: 
+
 $$
 \|Tx - Tp\| \le \|x-p\|
 \Rightarrow
