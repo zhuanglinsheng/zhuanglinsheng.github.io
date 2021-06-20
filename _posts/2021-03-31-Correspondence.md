@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Purturbation of Correspondence"
+title: "Perturbation of Correspondence"
 use_math: true
 lang: en
 tags: notes, convex-optimization
-desc: Briefly speaking, a set map (correspondence) can be purturbed around metric regular points. Metric regularity is equivalent to openness, while openness has a simple equivalent representation when the correspondence is closed and convex. 
+desc: Briefly speaking, a set map (correspondence) can be perturbed around metric regular points. Metric regularity is equivalent to openness, while openness has a simple equivalent representation when the correspondence is closed and convex. 
 ---
 
 <br>
@@ -15,7 +15,7 @@ Reference
 
 <br>
 
-Briefly speaking, a set map (correspondence) can be purturbed around metric regular points. Metric regularity is equivalent to openness, while openness has a simple equivalent representation when the correspondence is closed and convex. 
+Briefly speaking, a set map (correspondence) can be perturbed around metric regular points. Metric regularity is equivalent to openness, while openness has a simple equivalent representation when the correspondence is closed and convex. 
 
 <br>
 
@@ -23,13 +23,12 @@ Briefly speaking, a set map (correspondence) can be purturbed around metric regu
 
 **Lemma 1. ([Robinson, 1976](https://pubsonline.informs.org/doi/10.1287/moor.1.2.130))** Suppose $\mathcal{X}$ and $Y$ are normed linear space. Let $\mathcal{C}\subset\mathcal{X}\times\mathcal{Y}$ be closed and convex. Let $P_\mathcal{X}$ and $P_\mathcal{Y}$ are projections onto $\mathcal{X}$, $\mathcal{Y}$ respectively. Suppose $P_\mathcal{X}(\mathcal{C})$ is bounded, then 
 
-i). If $X$ is complete we have $\text{int}(cl(P_\mathcal{Y}(\mathcal{C}))) = \text{int}(P_{\mathcal{Y}}(\mathcal{C}))$. 
-
-ii). If $X$ is reflexive then $P_\mathcal{Y}(X)$ is closed. 
+- If $X$ is complete we have $\text{int}(cl(P_\mathcal{Y}(\mathcal{C}))) = \text{int}(P_{\mathcal{Y}}(\mathcal{C}))$. 
+- If $X$ is reflexive then $P_\mathcal{Y}(X)$ is closed. 
 
 ***Proof.*** 
 
-i). It's trivial that $\text{int}(P_\mathcal{Y}(\mathcal{C})) \subset \text{int}(cl(P_\mathcal{Y}(\mathcal{C})))$, now we try to show the opposite. Suppose $P_\mathcal{X}(\mathcal{C})\subset\gamma B_\mathcal{X}$; let $y'\in \text{int}(cl(P_{\mathcal{Y}}(\mathcal{C})))$. Thus, for some $\epsilon>0$ we have $y'+\epsilon B_\mathcal{Y}\subset cl(P_\mathcal{Y}(\mathcal{C}))$. We shall show there exists a $x'\in\mathcal{X}$ with $(x',y')\in\mathcal{C}$. 
+(1) It's trivial that $\text{int}(P_\mathcal{Y}(\mathcal{C})) \subset \text{int}(cl(P_\mathcal{Y}(\mathcal{C})))$, now we try to show the opposite. Suppose $P_\mathcal{X}(\mathcal{C})\subset\gamma B_\mathcal{X}$; let $y'\in \text{int}(cl(P_{\mathcal{Y}}(\mathcal{C})))$. Thus, for some $\epsilon>0$ we have $y'+\epsilon B_\mathcal{Y}\subset cl(P_\mathcal{Y}(\mathcal{C}))$. We shall show there exists a $x'\in\mathcal{X}$ with $(x',y')\in\mathcal{C}$. 
 
 Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\|r_0\| \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\|x_0\| \le \gamma$. For $k=0$ we have 
 
@@ -75,7 +74,7 @@ $$
 
 so that $(x_k)$ is Cauchy sequence. By completeness of $X$ we know $x_k\to x'$. Also, $y_k\to y'$ by the construction (1). Since $\mathcal{C}$ is closed we have $(x',y')\in\mathcal{C}$. 
 
-ii). Omitted. 
+(2) Omitted. 
 
 **Def. 7.1. (Closeness)** A correspondence $\Psi : \mathcal{X}\rightrightarrows \mathcal{Y}$ is closed at $x$ if for all $x_k\to x$, $y_k\in\Psi(x_k)$ and $y_k\to y$, we have $y\in\Phi(x)$. 
 
@@ -91,13 +90,13 @@ $$
 
 By translating the origin we can simply consider $x= 0$ and $y = 0$, and $0\in \Psi(0)$ by assumption. We want to first show that $0 \in \text{int}(\Psi(B_\mathcal{X}))$ (the case when $r=1$). Consider $Z = cl(\Psi(\frac{1}{2}B_\mathcal{X}))$ which is nonempty, closed and convex. 
 
-Firstly, we want to show that $\Psi(\frac{1}{2}B_\mathcal{X})$ is obsorving. Since $0\in \text{int}(range(\Psi))$, for all $y\in\mathcal{Y}$ there is some $\alpha>0$ such that $\alpha y\in range(\Psi)$. Hence, $\alpha y\in\Psi(x)$ for some $x$. Thus, 
+Firstly, we want to show that $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing. Since $0\in \text{int}(range(\Psi))$, for all $y\in\mathcal{Y}$ there is some $\alpha>0$ such that $\alpha y\in range(\Psi)$. Hence, $\alpha y\in\Psi(x)$ for some $x$. Thus, 
 
 $$
 t\alpha y = t\alpha y + (1-t)0 \in t\Psi(x) + (1-t)\Psi(0)\subset \Psi(tx)
 $$
 
-Thus, $t\alpha y\in\Psi(\frac{1}{2}B_\mathcal{X})$ for some sufficiently small $t>0$ (because $tx\in B_\mathcal{X}$ when $t$ is small). Thus, $\Psi(\frac{1}{2}B_\mathcal{X})$ is obsorving (for any $x\in\mathcal{X}$ there exists $t>0$ such that $tx\in \Psi(\frac{1}{2}B_\mathcal{X})$). Furthermore, $Z$ is obsorving. 
+Thus, $t\alpha y\in\Psi(\frac{1}{2}B_\mathcal{X})$ for some sufficiently small $t>0$ (because $tx\in B_\mathcal{X}$ when $t$ is small). Thus, $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing (for any $x\in\mathcal{X}$ there exists $t>0$ such that $tx\in \Psi(\frac{1}{2}B_\mathcal{X})$). Furthermore, $Z$ is absorbing. 
 
 Secondly, Since $\mathcal{Y}$ is a [barrelled space](https://en.wikipedia.org/wiki/Barrelled_space), we have $0\in \text{int}(Z)$. Thus, there exists a $\eta>0$ such that $0\in\eta B_\mathcal{Y} \subset \text{int}(cl(\Psi(\frac{1}{2}B_\mathcal{X})))$. Consider $\mathcal{C} = gph(\Psi) \cap (cl(\frac{1}{2}B_\mathcal{X})\times\mathcal{Y})$ and clearly $\Psi(cl(\frac{1}{2}B_\mathcal{X})) = P_\mathcal{Y}(\mathcal{C})$. Moreover, $\mathcal{C}$ is closed, convex and $P_\mathcal{X}(\mathcal{C}) = cl(\frac{1}{2}B_\mathcal{X})$ is bounded. By Lemma 1 we have 
 
@@ -163,8 +162,7 @@ Thus, we can pick $t_0 = 2$. END.
 
 ### 3. Metric Regularity at rate $\gamma$ 
 
-**Def. 9. (Metric Regularity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if there exists a nerghborhood $\mathcal{N}$ of $(x_0,y_0)$ such that  for all $(x,y)\in \mathcal{N}$ we have 
-
+**Def. 9. (Metric Regularity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if there exists a neighborhood $\mathcal{N}$ of $(x_0,y_0)$ such that  for all $(x,y)\in \mathcal{N}$ we have 
 $$
 D_\mathcal{X}(x,\Psi^{-1}(y)) \le c\cdot D_\mathcal{Y}(y,\Psi(x))
 $$
