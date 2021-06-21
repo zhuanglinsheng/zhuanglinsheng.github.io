@@ -76,10 +76,9 @@ so that $(x_k)$ is Cauchy sequence. By completeness of $X$ we know $x_k\to x'$. 
 
 (2) Omitted. 
 
-**Def. 7.1. (Closeness)** A correspondence $\Psi : \mathcal{X}\rightrightarrows \mathcal{Y}$ is closed at $x$ if for all $x_k\to x$, $y_k\in\Psi(x_k)$ and $y_k\to y$, we have $y\in\Phi(x)$. 
+**Def. (Closeness)** A correspondence $\Psi : \mathcal{X}\rightrightarrows \mathcal{Y}$ is closed at $x$ if for all $x_k\to x$, $y_k\in\Psi(x_k)$ and $y_k\to y$, we have $y\in\Phi(x)$. 
 
-**Def. 7.2. (Convexity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is convex if for any $x_1, x_2\in\mathcal{X}$ and $t\in[0,1]$, we have 
-
+**Def. (Convexity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is convex if for any $x_1, x_2\in\mathcal{X}$ and $t\in[0,1]$, we have 
 $$
 t\Psi(x_1) + (1-t)\Phi(x_2) \subset \Psi(tx_1+(1-t)x_2)
 $$
@@ -98,7 +97,7 @@ $$
 
 Thus, $t\alpha y\in\Psi(\frac{1}{2}B_\mathcal{X})$ for some sufficiently small $t>0$ (because $tx\in B_\mathcal{X}$ when $t$ is small). Thus, $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing (for any $x\in\mathcal{X}$ there exists $t>0$ such that $tx\in \Psi(\frac{1}{2}B_\mathcal{X})$). Furthermore, $Z$ is absorbing. 
 
-Secondly, Since $\mathcal{Y}$ is a [barrelled space](https://en.wikipedia.org/wiki/Barrelled_space), we have $0\in \text{int}(Z)$. Thus, there exists a $\eta>0$ such that $0\in\eta B_\mathcal{Y} \subset \text{int}(cl(\Psi(\frac{1}{2}B_\mathcal{X})))$. Consider $\mathcal{C} = gph(\Psi) \cap (cl(\frac{1}{2}B_\mathcal{X})\times\mathcal{Y})$ and clearly $\Psi(cl(\frac{1}{2}B_\mathcal{X})) = P_\mathcal{Y}(\mathcal{C})$. Moreover, $\mathcal{C}$ is closed, convex and $P_\mathcal{X}(\mathcal{C}) = cl(\frac{1}{2}B_\mathcal{X})$ is bounded. By Lemma 1 we have 
+Secondly, Since $\mathcal{Y}$ is a [barreled space](https://en.wikipedia.org/wiki/Barrelled_space), we have $0\in \text{int}(Z)$. Thus, there exists a $\eta>0$ such that $0\in\eta B_\mathcal{Y} \subset \text{int}(cl(\Psi(\frac{1}{2}B_\mathcal{X})))$. Consider $\mathcal{C} = gph(\Psi) \cap (cl(\frac{1}{2}B_\mathcal{X})\times\mathcal{Y})$ and clearly $\Psi(cl(\frac{1}{2}B_\mathcal{X})) = P_\mathcal{Y}(\mathcal{C})$. Moreover, $\mathcal{C}$ is closed, convex and $P_\mathcal{X}(\mathcal{C}) = cl(\frac{1}{2}B_\mathcal{X})$ is bounded. By Lemma 1 we have 
 
 $$
 \eta B_\mathcal{Y} \subset \text{int}(cl(\Psi(\frac{1}{2}B_\mathcal{X}))) \subset \text{int}(cl(\Psi(cl(\frac{1}{2}B_\mathcal{X})))) = \text{int}(\Psi(cl(\frac{1}{2}B_\mathcal{X}))) \subset \text{int}(\Psi(B_\mathcal{X}))
@@ -118,13 +117,12 @@ Thus, $0\in \text{int}(\Psi(rB_\mathcal{X}))$ for all $r\in[0,1]$.
 
 ### 2. Openness at rate $\gamma$
 
-**Def. 8. (Openness)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is open at $(x^0,y^0)\in gph(\Psi)$ at a linear rate $\gamma>0$, if there exists $t_0>0$ and a neighborhood $\mathcal{N}$ of $(x^0,y^0)$ such that for all $(x,y)\in gph(\Psi)\cap\mathcal{N}$ and for all $t\in[0,t_0]$ we have 
-
+**Def. (Openness)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is open at $(x^0,y^0)\in gph(\Psi)$ at a linear rate $\gamma>0$, if there exists $t_0>0$ and a neighborhood $\mathcal{N}$ of $(x^0,y^0)$ such that for all $(x,y)\in gph(\Psi)\cap\mathcal{N}$ and for all $t\in[0,t_0]$ we have 
 $$
 y+\gamma t \cdot B_\mathcal{Y}\subset\Psi(x+t \cdot B_\mathcal{X})
 $$
 
-**Proposition 7.** Suppose $\Psi:\mathcal{X}\rightrightarrows \mathcal{Y}$ is closed and convex, then $\Psi$ is open at $(x_0,y_0)$ if and only if $y_0\in \text{int}(range(\Psi))$. 
+**Proposition 3.** Suppose $\Psi:\mathcal{X}\rightrightarrows \mathcal{Y}$ is closed and convex, then $\Psi$ is open at $(x_0,y_0)$ if and only if $y_0\in \text{int}(range(\Psi))$. 
 
 ***Proof.*** 
 
@@ -162,16 +160,17 @@ Thus, we can pick $t_0 = 2$. END.
 
 ### 3. Metric Regularity at rate $\gamma$ 
 
-**Def. 9. (Metric Regularity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if there exists a neighborhood $\mathcal{N}$ of $(x_0,y_0)$ such that  for all $(x,y)\in \mathcal{N}$ we have 
+**Def. (Metric Regularity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if there exists a neighborhood $\mathcal{N}$ of $(x_0,y_0)$ such that  for all $(x,y)\in \mathcal{N}$ we have 
 $$
 D_\mathcal{X}(x,\Psi^{-1}(y)) \le c\cdot D_\mathcal{Y}(y,\Psi(x))
+\tag{2}
 $$
 
 where $D_\mathcal{X}(.,.)$ and $D_{\mathcal{Y}}(.,.)$ are the minimum distance between point and set on $\mathcal{X}$ and $\mathcal{Y}$ respectively. 
 
 **Note.** $\mathcal{N}$ is NOT necessarily included by $gph(\Psi)$. If $(x,y)\in gph(\Psi)$ then we have $D_\mathcal{X}(x,\Psi^{-1}(y)) =0$ and $ D_\mathcal{Y}(y,\Psi(x)) = 0$. 
 
-**Proposition 8.** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if and only if $\Psi$ is open at $(x_0,y_0)$ at the rate $\gamma = 1/c$. 
+**Proposition 4.** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if and only if $\Psi$ is open at $(x_0,y_0)$ at the rate $\gamma = 1/c$. 
 
 ***Proof.*** 
 
@@ -220,5 +219,77 @@ $$
 Pushing $\alpha\to 0$ and we have the conclusion. END. 
 
 <br>
+
+### 4. Perturbation of the Set Maps $\Psi_G$ 
+
+**Def.** Given a continuous function $G:\mathcal{X}\to\mathcal{Y}$ and a cone $\mathcal{K}\subset\mathcal{Y}$, define the set map $\Psi_G$ by 
+$$
+\Psi_G(x) = G(x) - \mathcal{K}
+$$
+**Proposition 5.** Given continuous function $G:\mathcal{X}\to\mathcal{Y}$ and $H:\mathcal{X}\to\mathcal{Y}$ and a solid cone $\mathcal{K}\subset\mathcal{Y}$. Suppose that
+
+(1) $\Psi_G$ is metric regular at $(x_0, y_0)$ at a rate $c>0$,
+
+(2) $A(x)=G(x)-H(x)$ is Lipschitz continuous in a neighborhood of $x_0$ with modulus $\kappa<1/c$,
+
+Then $\Psi_H$ is metric regular at $(x_0,y_0-A(x_0))$ at rate $c/(1-c\kappa)$. 
+
+***Proof.*** 
+
+Let $\eta_x>0$ and $\eta_y>0$ be the radius of the neighborhood of $(x_0, y_0)$ such that (2) holds for all $(x, y)$ with 
+$$
+\|x-x_0\| < \eta_x,
+\quad
+\|y-y_0\| < \eta_y
+$$
+For any $\tilde{\eta}_x>0, \tilde{\eta}_y>0$ that are sufficiently small so that $\tilde{\eta}_x<\eta_x$ and $\tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y$, we arbitrarily pick $(x,y)$ such that 
+$$
+\|x-x_0\| < \tilde{\eta}_x,
+\quad
+\|y-(y_0-A(x_0))\| < \tilde{\eta}_y
+$$
+For any $\epsilon>0$, we construct a sequence $(x_k)$ that satisfies the properties:
+
+(1) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$,
+
+(2) $\|x_{k+1}-x_k\| \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
+
+(3) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
+
+First, let $x_1=x$, then $\|x_1 - x_0\| < \tilde{\eta}_x < \eta_x$ and 
+$$
+\|y+A(x_1)-y_0\| \le \|y-(y_0-A(x_0))\| + \|A(x_1)-A(x_0)\| < \tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y
+$$
+By metric regularity of $\Psi_G$ at $(x_0, y_0)$ we have 
+$$
+\begin{aligned}
+D_\mathcal{X}(x_1, \Psi_G^{-1}(y+A(x_1))) 
+&\le c \cdot D_\mathcal{Y}(y+A(x_1),\Psi_G(x_1))\\
+&=   c \cdot D_\mathcal{Y}(y,G(x)-A(x)-\mathcal{K}) = c \cdot D_\mathcal{Y}(y, \Psi_H(x))
+\end{aligned}
+$$
+Thus we can pick $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
+$$
+\|x_2 - x_1\| \le c(1+\epsilon) \cdot D_\mathcal{Y}(y,\Psi_H(x))
+$$
+
+
+Now suppose we have had $(x_1, ..., x_k)$, $k \ge 2$ that satisfy the conditions. By property (3) we have 
+$$
+\begin{aligned}
+D_\mathcal{X}(x_k, \Psi_G^{-1}(y+A(x_k))) 
+&\le c \cdot D_\mathcal{Y}(y+A(x_k),\Psi_G(x_k))\\
+&\le c \cdot \| (y + A(x_k)) - (y + A(x_{k-1})) \| \le c\kappa \cdot \|x_k-x_{k-1}\|
+\end{aligned}
+$$
+Thus we can pick $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ such that 
+$$
+\|x_{k+1}-x_k\| \le c\kappa \cdot (1+\epsilon) \cdot \|x_k - x_{k-1}\|
+$$
+
+
+
+
+
 
 <br>
