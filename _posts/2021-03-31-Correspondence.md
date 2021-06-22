@@ -28,7 +28,9 @@ Briefly speaking, a set map (correspondence) can be perturbed around metric regu
 
 ***Proof.*** 
 
-(1) It's trivial that $\text{int}(P_\mathcal{Y}(\mathcal{C})) \subset \text{int}(cl(P_\mathcal{Y}(\mathcal{C})))$, now we try to show the opposite. Suppose $P_\mathcal{X}(\mathcal{C})\subset\gamma B_\mathcal{X}$; let $y'\in \text{int}(cl(P_{\mathcal{Y}}(\mathcal{C})))$. Thus, for some $\epsilon>0$ we have $y'+\epsilon B_\mathcal{Y}\subset cl(P_\mathcal{Y}(\mathcal{C}))$. We shall show there exists a $x'\in\mathcal{X}$ with $(x',y')\in\mathcal{C}$. 
+(1) It's trivial that $\text{int}(P_\mathcal{Y}(\mathcal{C})) \subset \text{int}(cl(P_\mathcal{Y}(\mathcal{C})))$, now we try to show the opposite. Suppose $P_\mathcal{X}(\mathcal{C})\subset\gamma B_\mathcal{X}$; let $y'\in \text{int}(cl(P_{\mathcal{Y}}(\mathcal{C})))$. Thus, for some $\epsilon>0$ we have $y'+\epsilon B_\mathcal{Y}\subset cl(P_\mathcal{Y}(\mathcal{C}))$. We shall show there exists a $x'\in\mathcal{X}$ with $(x',y')\in\mathcal{C}$ $\Leftrightarrow$ $y'\in P_\mathcal{Y}(\mathcal{C})$. 
+
+[There are some simple missing logics: Since $y'+\epsilon B_\mathcal{Y} \subset cl(P)$, then any point $y\in y'+\epsilon/2 \cdot B_\mathcal{Y}$ should also lie in $\text{int}(cl(P))$. Thus, if we can show $y'\in P$ then we actually have showed that $y\in P$. ]
 
 Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\|r_0\| \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\|x_0\| \le \gamma$. For $k=0$ we have 
 
