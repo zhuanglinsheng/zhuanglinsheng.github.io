@@ -40,8 +40,18 @@ $$
 \tag{1}
 $$
 
-Now suppose that (1) holds for some $n\ge0$. Then $\|(2-2^{-n})r_n\| \le (2-2^{-n})(\frac{\epsilon}{2})<\epsilon$ implies that $y' - (2-2^{-n})r_n \in y'+\epsilon B_\mathcal{Y} \subset cl(P_\mathcal{Y}(\mathcal{C}))$. So we can find $(u,v)\in\mathcal{C}$ with 
+If we can show by induction that such a sequence $(x_k, y_k)$ exists, then for any $k$ and any $n\ge1$ we have 
+$$
+\|x_{k+n}-x_k\| \le \sum^{n-1}_{i=0}\|x_{k+i+1}-x_{k+i}\| \le \sum^{n-1}_{i=0}2^{-(k+i)}\gamma < 2^{-(k-1)}\gamma
+$$
 
+so that $(x_k)$ is Cauchy sequence. By completeness of $X$ we know $x_k\to x'$ for some $x'$. Also, $y_k\to y'$ by the construction (1). Since $\mathcal{C}$ is closed we have $(x',y')\in\mathcal{C}$. 
+
+Now suppose that (1) holds for some $n\ge0$. Then $\|(2-2^{-n})r_n\| \le (2-2^{-n})(\frac{\epsilon}{2})<\epsilon$ implies that 
+$$
+y' - (2-2^{-n})r_n \in y'+\epsilon B_\mathcal{Y} \subset cl(P_\mathcal{Y}(\mathcal{C}))
+$$
+So we can find $(u,v)\in\mathcal{C}$ with 
 $$
 v = y'-(2-2^{-n})r_n + r_{n+1},\quad\|r_{n+1}\|\le\frac{\epsilon}{2}
 $$
@@ -55,7 +65,7 @@ $$
 The pair $(x_{n+1},y_{n+1})$ belongs to $\mathcal{C}$ by convexity; we have 
 
 $$
-\|x_{n+1}-x_n\| \le 2^{-(n+1)}\|u-x_n\| \le 2^{-(n+1)}(\gamma+\gamma) = 2^{-n}\gamma
+\|x_{n+1}-x_n\| \le 2^{-(n+1)}\|u-x_n\| \le \frac{\gamma+\gamma}{2^{n+1}} = \frac{\gamma}{2^n}
 $$
 
 and 
@@ -68,13 +78,7 @@ y_{n+1}
 \end{aligned}
 $$
 
-So (1) holds for $k=n+1$ and hence, by induction, for all $k$. For any $k$ and any $n>>1$ we have 
-
-$$
-\|x_{k+n}-x_k\| \le \sum^{n-1}_{i=0}\|x_{k+i+1}-x_{k+i}\| \le \sum^{n-1}_{i=0}2^{-(k+i)}\gamma < 2^{-(k-1)}\gamma
-$$
-
-so that $(x_k)$ is Cauchy sequence. By completeness of $X$ we know $x_k\to x'$. Also, $y_k\to y'$ by the construction (1). Since $\mathcal{C}$ is closed we have $(x',y')\in\mathcal{C}$. 
+So (1) holds for $k=n+1$ and hence, by induction, for all $k$. 
 
 (2) Omitted. 
 
@@ -85,7 +89,7 @@ $$
 t\Psi(x_1) + (1-t)\Phi(x_2) \subset \Psi(tx_1+(1-t)x_2)
 $$
 
-**Proposition 2. ([Robinson, 1976](https://pubsonline.informs.org/doi/10.1287/moor.1.2.130))** Suppose $\mathcal{X}$ and $\mathcal{Y}$ are Banach spaces and the correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is closed and convex. For all $y\in \text{int}(range(\Psi))$ and $x\in\Psi^{-1}(y)$, we have $y\in \text{int}(\Psi(x+rB_{\mathcal{X}}))$ for all $r\in[0,1]$. 
+**Proposition 2. ([Robinson, 1976](https://pubsonline.informs.org/doi/10.1287/moor.1.2.130))** Suppose $\mathcal{X}$ and $\mathcal{Y}$ are Banach spaces and the correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is closed and convex. If $y\in \text{int}(range(\Psi))$ then for any $x\in\Psi^{-1}(y)$ we have $y\in \text{int}(\Psi(x+rB_{\mathcal{X}}))$ for all $r\in[0,1]$. 
 
 ***Proof.*** 
 
@@ -117,7 +121,7 @@ Thus, $0\in \text{int}(\Psi(rB_\mathcal{X}))$ for all $r\in[0,1]$.
 
 <br>
 
-### 2. Openness at rate $\gamma$
+### 2. Openness at rate $\gamma$ 
 
 **Def. (Openness)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is open at $(x^0,y^0)\in gph(\Psi)$ at a linear rate $\gamma>0$, if there exists $t_0>0$ and a neighborhood $\mathcal{N}$ of $(x^0,y^0)$ such that for all $(x,y)\in gph(\Psi)\cap\mathcal{N}$ and for all $t\in[0,t_0]$ we have 
 $$
@@ -244,37 +248,94 @@ $$
 \quad
 \|y-y_0\| < \eta_y
 $$
-For any $\tilde{\eta}_x>0, \tilde{\eta}_y>0$ that are sufficiently small so that $\tilde{\eta}_x<\eta_x$ and $\tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y$, we arbitrarily pick $(x,y)$ such that 
+For any $\epsilon>0$, there exists $\tilde{\eta}_x>0, \tilde{\eta}_y>0$ that are sufficiently small so that 
+$$
+\begin{aligned}
+\tilde{\eta}_x<\eta_x\\
+\tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y\\
+\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y
+\end{aligned}
+$$
+We arbitrarily pick $(x,y)$ such that 
 $$
 \|x-x_0\| < \tilde{\eta}_x,
 \quad
 \|y-(y_0-A(x_0))\| < \tilde{\eta}_y
 $$
-For any $\epsilon>0$, we construct a sequence $(x_k)$ that satisfies the properties:
+Note that 
+$$
+\|x - x_0\| < \tilde{\eta}_x < \eta_x
+$$
 
-(1) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$,
-
-(2) $\|x_{k+1}-x_k\| \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
-
-(3) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
-
-First, let $x_1=x$, then $\|x_1 - x_0\| < \tilde{\eta}_x < \eta_x$ and 
 $$
 \|y+A(x_1)-y_0\| \le \|y-(y_0-A(x_0))\| + \|A(x_1)-A(x_0)\| < \tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y
 $$
-By metric regularity of $\Psi_G$ at $(x_0, y_0)$ we have 
+
+and 
 $$
 \begin{aligned}
-D_\mathcal{X}(x_1, \Psi_G^{-1}(y+A(x_1))) 
-&\le c \cdot D_\mathcal{Y}(y+A(x_1),\Psi_G(x_1))\\
-&=   c \cdot D_\mathcal{Y}(y,G(x)-A(x)-\mathcal{K}) = c \cdot D_\mathcal{Y}(y, \Psi_H(x))
+D_\mathcal{Y}(y,\Psi_H(x)) 
+&= D_Y(G(x)-y-D(x),\mathcal{K})\\
+&\le\|G(x)-G(x_0)\| + \|y-y_0\| + \|D(x)\| < \eta_y
 \end{aligned}
 $$
-Thus we can pick $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
+We construct a sequence $(x_k)$ that satisfies the properties:
+
+(1) $x_1 = x$,
+
+(2) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ $\Leftrightarrow$ $y+A(x_k)\in\Psi_G(x_{k+1})$, 
+
+(3) $\|x_{k+1}-x_k\| \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
+
+(4) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
+
+If we can show the existence of such a sequence then (3), (4) and (2) implies that 
 $$
-\|x_2 - x_1\| \le c(1+\epsilon) \cdot D_\mathcal{Y}(y,\Psi_H(x))
+\begin{aligned}
+\|x_{k+1}-x_k\| 
+&\le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))\\
+&\le (1+\epsilon)c\cdot D_\mathcal{Y}(y_k+A(x_k),\Psi_G(x_k))\\
+&=   (1+\epsilon)c\cdot \|(y+A(x_k)-(y+A(x_{k-1})\|
+ \le (1+\epsilon)c \kappa \cdot \|x_k-x_{k-1}\|
+\end{aligned}
+$$
+Thus, for all $x_k$ in the sequence $(x_k)$ we have 
+$$
+\begin{aligned}
+\|x_k-x_1\| 
+&\le \frac{1}{1 - (1+\epsilon)c\kappa} \cdot \|x_2-x_1\|\\
+&\le \frac{1}{1 - (1+\epsilon)c\kappa} \cdot (1+\epsilon)c \cdot D_\mathcal{Y}(y+A(x_1), \Psi_G(x_1))\\
+&= \frac{(1+\epsilon)c}{1 - (1+\epsilon)c\kappa} \cdot D_\mathcal{Y}(y,\Psi_G(x_1)-A(x_1))\\
+&= \frac{(1+\epsilon)c}{1 - (1+\epsilon)c\kappa} \cdot D_\mathcal{Y}(y,\Psi_H(x_1))
+\end{aligned}
+$$
+Remember $x_1 = x$, letting $\epsilon\to0$ and we have 
+$$
+\|x_k-x\| \le c/(1-c\kappa)\cdot D_\mathcal{Y}(y,\Psi_H(x))
+$$
+By (4) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, (2) implies that $y+A(x^*)\in\Psi_G(x^*)$ $\Rightarrow$ $y\in\Psi_H(x^*)$ $\Rightarrow$ $x^*\in\Psi_H^{-1}(y)$. Thus, 
+$$
+D_\mathcal{X}(x, \Psi_H^{-1}(y)) \le c/(1-c\kappa) \cdot D_\mathcal{Y}(y,\Psi_H(x))
+$$
+And the proposition is proved. 
+
+Now we want to construct the sequence satisfying (1)-(4). Letting $x_1=x$ and we have
+
+Thus, (1) and (4) holds for $x_1$. We can always pick a point $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
+$$
+\|x_2 - x_1\| \le (1+\epsilon) \cdot D_\mathcal{Y}(x_1,\Psi_H^{-1}(y+A(x_1)))
 $$
 
+
+Then by metric regularity of $\Psi_G$ at $(x_0, y_0)$ we have 
+$$
+\begin{aligned}
+\|x_2 - x_1\| 
+&\le (1+\epsilon)\cdot D_\mathcal{X}(x_1, \Psi_G^{-1}(y+A(x_1)))\\
+&\le (1+\epsilon)\cdot c \cdot D_\mathcal{Y}(y+A(x_1),\Psi_G(x_1))\\
+&=   (1+\epsilon)\cdot c \cdot D_\mathcal{Y}(y,G(x)-A(x)-\mathcal{K}) = c(1+\epsilon) \cdot D_\mathcal{Y}(y, \Psi_H(x))
+\end{aligned}
+$$
 
 Now suppose we have had $(x_1, ..., x_k)$, $k \ge 2$ that satisfy the conditions. By property (3) we have 
 $$
