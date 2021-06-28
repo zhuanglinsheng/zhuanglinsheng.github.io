@@ -34,41 +34,63 @@ Briefly speaking, a set map (correspondence) can be perturbed around metric regu
 
 Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\|r_0\| \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\|x_0\| \le \gamma$. For $k=0$ we have 
 
+
 $$
 (x_k,y_k)\in\mathcal{C},\quad y_k = y' + \frac{r_k}{2^k}, \quad 
 \|r_k\| \le \frac{\epsilon}{2}, \quad \|x_k-x_{k-1}\| \le \frac{\gamma}{2^{k-1}}
 \tag{1}
 $$
 
+
+
 If we can show by induction that such a sequence $(x_k, y_k)$ exists, then for any $k$ and any $n\ge1$ we have 
+
+
 $$
 \|x_{k+n}-x_k\| \le \sum^{n-1}_{i=0}\|x_{k+i+1}-x_{k+i}\| \le \sum^{n-1}_{i=0}2^{-(k+i)}\gamma < 2^{-(k-1)}\gamma
 $$
 
+
+
 so that $(x_k)$ is Cauchy sequence. By completeness of $X$ we know $x_k\to x'$ for some $x'$. Also, $y_k\to y'$ by the construction (1). Since $\mathcal{C}$ is closed we have $(x',y')\in\mathcal{C}$. 
 
 Now suppose that (1) holds for some $n\ge0$. Then $\|(2-2^{-n})r_n\| \le (2-2^{-n})(\frac{\epsilon}{2})<\epsilon$ implies that 
+
+
 $$
 y' - (2-2^{-n})r_n \in y'+\epsilon B_\mathcal{Y} \subset cl(P_\mathcal{Y}(\mathcal{C}))
 $$
+
+
 So we can find $(u,v)\in\mathcal{C}$ with 
+
+
 $$
 v = y'-(2-2^{-n})r_n + r_{n+1},\quad\|r_{n+1}\|\le\frac{\epsilon}{2}
 $$
 
+
+
 We also have $\|u\|\le \gamma$. Define 
+
 
 $$
 (x_{n+1},y_{n+1}) = (1-2^{-(n+1)})(x_n,y_n) + 2^{-(n+1)}(u,v)
 $$
 
+
+
 The pair $(x_{n+1},y_{n+1})$ belongs to $\mathcal{C}$ by convexity; we have 
+
 
 $$
 \|x_{n+1}-x_n\| \le 2^{-(n+1)}\|u-x_n\| \le \frac{\gamma+\gamma}{2^{n+1}} = \frac{\gamma}{2^n}
 $$
 
+
+
 and 
+
 
 $$
 \begin{aligned}
@@ -78,6 +100,8 @@ y_{n+1}
 \end{aligned}
 $$
 
+
+
 So (1) holds for $k=n+1$ and hence, by induction, for all $k$. 
 
 (2) Omitted. 
@@ -85,9 +109,13 @@ So (1) holds for $k=n+1$ and hence, by induction, for all $k$.
 **Def. (Closeness)** A correspondence $\Psi : \mathcal{X}\rightrightarrows \mathcal{Y}$ is closed at $x$ if for all $x_k\to x$, $y_k\in\Psi(x_k)$ and $y_k\to y$, we have $y\in\Phi(x)$. 
 
 **Def. (Convexity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is convex if for any $x_1, x_2\in\mathcal{X}$ and $t\in[0,1]$, we have 
+
+
 $$
 t\Psi(x_1) + (1-t)\Phi(x_2) \subset \Psi(tx_1+(1-t)x_2)
 $$
+
+
 
 **Proposition 2. ([Robinson, 1976](https://pubsonline.informs.org/doi/10.1287/moor.1.2.130))** Suppose $\mathcal{X}$ and $\mathcal{Y}$ are Banach spaces and the correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is closed and convex. If $y\in \text{int}(range(\Psi))$ then for any $x\in\Psi^{-1}(y)$ we have $y\in \text{int}(\Psi(x+rB_{\mathcal{X}}))$ for all $r\in[0,1]$. 
 
@@ -97,25 +125,34 @@ By translating the origin we can simply consider $x= 0$ and $y = 0$, and $0\in \
 
 Firstly, we want to show that $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing. Since $0\in \text{int}(range(\Psi))$, for all $y\in\mathcal{Y}$ there is some $\alpha>0$ such that $\alpha y\in range(\Psi)$. Hence, $\alpha y\in\Psi(x)$ for some $x$. Thus, 
 
+
 $$
 t\alpha y = t\alpha y + (1-t)0 \in t\Psi(x) + (1-t)\Psi(0)\subset \Psi(tx)
 $$
+
+
 
 Thus, $t\alpha y\in\Psi(\frac{1}{2}B_\mathcal{X})$ for some sufficiently small $t>0$ (because $tx\in B_\mathcal{X}$ when $t$ is small). Thus, $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing (for any $x\in\mathcal{X}$ there exists $t>0$ such that $tx\in \Psi(\frac{1}{2}B_\mathcal{X})$). Furthermore, $Z$ is absorbing. 
 
 Secondly, Since $\mathcal{Y}$ is a [barreled space](https://en.wikipedia.org/wiki/Barrelled_space), we have $0\in \text{int}(Z)$. Thus, there exists a $\eta>0$ such that $0\in\eta B_\mathcal{Y} \subset \text{int}(cl(\Psi(\frac{1}{2}B_\mathcal{X})))$. Consider $\mathcal{C} = gph(\Psi) \cap (cl(\frac{1}{2}B_\mathcal{X})\times\mathcal{Y})$ and clearly $\Psi(cl(\frac{1}{2}B_\mathcal{X})) = P_\mathcal{Y}(\mathcal{C})$. Moreover, $\mathcal{C}$ is closed, convex and $P_\mathcal{X}(\mathcal{C}) = cl(\frac{1}{2}B_\mathcal{X})$ is bounded. By Lemma 1 we have 
 
+
 $$
 \eta B_\mathcal{Y} \subset \text{int}(cl(\Psi(\frac{1}{2}B_\mathcal{X}))) \subset \text{int}(cl(\Psi(cl(\frac{1}{2}B_\mathcal{X})))) = \text{int}(\Psi(cl(\frac{1}{2}B_\mathcal{X}))) \subset \text{int}(\Psi(B_\mathcal{X}))
 $$
+
+
 
 which completes the proof when $r=1$. 
 
 Finally, since $0\in \text{int}(\Psi(B_\mathcal{X}))$, for any $r\in(0,1)$ we have 
 
+
 $$
 r\eta B_\mathcal{Y} \subset r\Psi(B_\mathcal{X}) + (1-r)0 \subset \Psi(rB_\mathcal{X}+(1-r)0) = \Psi(rB_\mathcal{X})
 $$
+
+
 
 Thus, $0\in \text{int}(\Psi(rB_\mathcal{X}))$ for all $r\in[0,1]$. 
 
@@ -124,9 +161,13 @@ Thus, $0\in \text{int}(\Psi(rB_\mathcal{X}))$ for all $r\in[0,1]$.
 ### 2. Openness at rate $\gamma$ 
 
 **Def. (Openness)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is open at $(x^0,y^0)\in gph(\Psi)$ at a linear rate $\gamma>0$, if there exists $t_0>0$ and a neighborhood $\mathcal{N}$ of $(x^0,y^0)$ such that for all $(x,y)\in gph(\Psi)\cap\mathcal{N}$ and for all $t\in[0,t_0]$ we have 
+
+
 $$
 y+\gamma t \cdot B_\mathcal{Y}\subset\Psi(x+t \cdot B_\mathcal{X})
 $$
+
+
 
 **Proposition 3.** Suppose $\Psi:\mathcal{X}\rightrightarrows \mathcal{Y}$ is closed and convex, then $\Psi$ is open at $(x_0,y_0)$ if and only if $y_0\in \text{int}(range(\Psi))$. 
 
@@ -134,19 +175,26 @@ $$
 
 "$\Rightarrow$" Suppose $\Psi$ is open at $(x_0, y_0)$. Then by the definition there exists $t_0>0$ and $\gamma>0$ such that 
 
+
 $$
 y_0+\gamma t_0 B_\mathcal{Y} \subset \Psi(x_0+t_0 B_\mathcal{X}) \subset range(\Psi)
 $$
+
+
 
 which implies that $y_0\in \text{int}(range(\Psi))$. 
 
 "$\Leftarrow$" Suppose $(x_0,y_0)\in gph(\Psi)$ and $y_0\in \text{int}(range(\Psi))$. We want to show that $\Psi$ is open at $(x_0,y_0)$. By Proposition 2 we have $y_0\in \text{int}(\Psi(x_0+B_{\mathcal{X}}))$. Thus, there exists $\gamma>0$ such that 
 
+
 $$
 y_0+2\gamma \cdot B_\mathcal{Y} \subset \Psi(x_0 + B_\mathcal{X})
 $$
 
+
+
 Let $\mathcal{N} = (x_0 + B_\mathcal{X})\times(y_0 + \gamma B_\mathcal{Y})$. For all $(x,y)\in gph(\Psi) \cap \mathcal{N}$ and $t\in[0,1]$ we have 
+
 
 $$
 \begin{aligned}
@@ -160,6 +208,8 @@ y + \gamma\cdot t B_\mathcal{Y}
 \end{aligned}
 $$
 
+
+
 Thus, we can pick $t_0 = 2$. END. 
 
 <br>
@@ -167,10 +217,14 @@ Thus, we can pick $t_0 = 2$. END.
 ### 3. Metric Regularity at rate $\gamma$ 
 
 **Def. (Metric Regularity)** A correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is metric regular at $(x_0,y_0)\in gph(\Psi)$ at a rate $c>0$ if there exists a neighborhood $\mathcal{N}$ of $(x_0,y_0)$ such that  for all $(x,y)\in \mathcal{N}$ we have 
+
+
 $$
 D_\mathcal{X}(x,\Psi^{-1}(y)) \le c\cdot D_\mathcal{Y}(y,\Psi(x))
 \tag{2}
 $$
+
+
 
 where $D_\mathcal{X}(.,.)$ and $D_{\mathcal{Y}}(.,.)$ are the minimum distance between point and set on $\mathcal{X}$ and $\mathcal{Y}$ respectively. 
 
