@@ -345,6 +345,8 @@ $$
 
 
 By (C) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, Condition (A) implies that 
+
+
 $$
 y+A(x^*)\in\Psi_G(x^*) \Rightarrow y\in\Psi_H(x^*) \Rightarrow x^*\in\Psi_H^{-1}(y)
 $$
@@ -362,12 +364,16 @@ And the proposition is proved.
 
 Now we want to construct the sequence satisfying conditions (A)-(C). By definition, we can always pick a point $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
 
+
 $$
 \|x_2 - x_1\| \le (1+\epsilon) \cdot D_\mathcal{Y}(x_1,\Psi_G^{-1}(y+A(x_1)))
 $$
 
 
+
 Then by metric regularity of $\Psi_G$ at $(x_0, y_0)$ we have 
+
+
 $$
 \begin{aligned}
 \|x_2 - x_1\| 
@@ -376,6 +382,8 @@ $$
  = c(1+\epsilon) \cdot D_\mathcal{Y}(y, \Psi_H(x))
 \end{aligned}
 $$
+
+
 
 Then by equation (3) and (6) we have 
 
