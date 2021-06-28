@@ -253,12 +253,10 @@ $$
 For any $\epsilon>0$, there exists $\tilde{\eta}_x>0, \tilde{\eta}_y>0$ that are sufficiently small so that 
 $$
 \begin{aligned}
-\tilde{\eta}_x<\eta_x\\
-\tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y\\
-\tilde{\eta}_x + c(1+\epsilon) \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right]<\eta_x\\
-\tilde{\eta}_y+\kappa\tilde{\eta}_x+\kappa c(1+\epsilon)\cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] < \eta_y\\
-\frac{c(1+\epsilon)}{1-(1+\epsilon)c\kappa} \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right]<\eta_x\\
-\tilde{\eta}_y+\kappa\tilde{\eta}_x+\frac{c\kappa(1+\epsilon)}{1-(1+\epsilon)c\kappa} \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right]<\eta_y
+\tilde{\eta}_x + c(1+\epsilon) \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] &<\eta_x\\
+\tilde{\eta}_y+\kappa\tilde{\eta}_x+\kappa c(1+\epsilon)\cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] &< \eta_y\\
+\frac{c(1+\epsilon)}{1-(1+\epsilon)c\kappa} \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] &<\eta_x\\
+\tilde{\eta}_y+\kappa\tilde{\eta}_x+\frac{c\kappa(1+\epsilon)}{1-(1+\epsilon)c\kappa} \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] &<\eta_y
 \end{aligned}
 \tag{3}
 $$
@@ -287,10 +285,17 @@ $$
 \tag{5}
 $$
 
+
+
+and
+
+
 $$
+\begin{aligned}
 D_\mathcal{Y}(y,\Psi_H(x)) 
-= D_\mathcal{Y}(G(x)-y-A(x),\mathcal{K})
-\le\|G(x)-G(x_0)\| + \|y-y_0\| + \|A(x)\|
+&= D_\mathcal{Y}(G(x)-y-A(x),\mathcal{K})\\
+&\le\|G(x)-G(x_0)\| + \|y-y_0\| + \|A(x)\|
+\end{aligned}
 \tag{6}
 $$
 
@@ -304,6 +309,8 @@ Letting $x_1 = x$, we want to construct a sequence $(x_k)$ that satisfies the pr
 (C) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
 
 If we can show the existence of such a sequence then (B), (C) and (A) implies that 
+
+
 $$
 \begin{aligned}
 \|x_{k+1}-x_k\| 
