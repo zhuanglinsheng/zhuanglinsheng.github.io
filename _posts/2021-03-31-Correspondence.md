@@ -229,6 +229,8 @@ Pushing $\alpha\to 0$ and we have the conclusion. END.
 ### 4. Perturbation of the Set Maps $\Psi_G$ 
 
 **Def.** Given a continuous function $G:\mathcal{X}\to\mathcal{Y}$ and a cone $\mathcal{K}\subset\mathcal{Y}$, define the set map $\Psi_G$ by 
+
+
 $$
 \Psi_G(x) = G(x) - \mathcal{K}
 $$
@@ -245,12 +247,18 @@ Then $\Psi_H$ is metric regular at $(x_0,y_0-A(x_0))$ at rate $c/(1-c\kappa)$.
 ***Proof.*** 
 
 Let $\eta_x>0$ and $\eta_y>0$ be the radius of the neighborhood of $(x_0, y_0)$ such that (2) holds for all $(x, y)$ with 
+
+
 $$
 \|x-x_0\| < \eta_x,
 \quad
 \|y-y_0\| < \eta_y
 $$
+
+
 For any $\epsilon>0$, there exists $\tilde{\eta}_x>0, \tilde{\eta}_y>0$ that are sufficiently small so that 
+
+
 $$
 \begin{aligned}
 \tilde{\eta}_x + c(1+\epsilon) \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] &<\eta_x\\
