@@ -232,11 +232,13 @@ Pushing $\alpha\to 0$ and we have the conclusion. END.
 $$
 \Psi_G(x) = G(x) - \mathcal{K}
 $$
+
+
 **Proposition 5.** Given continuous function $G:\mathcal{X}\to\mathcal{Y}$ and $H:\mathcal{X}\to\mathcal{Y}$ and a solid cone $\mathcal{K}\subset\mathcal{Y}$. Suppose that
 
 (1) $\Psi_G$ is metric regular at $(x_0, y_0)$ at a rate $c>0$,
 
-(2) $A(x)=G(x)-H(x)$ is Lipschitz continuous in a neighborhood of $x_0$ with modulus $\kappa<1/c$,
+(2) $A(x)=G(x)-H(x)$ is Lipschitz in a neighborhood of $x_0$ with modulus $\kappa<1/c$,
 
 Then $\Psi_H$ is metric regular at $(x_0,y_0-A(x_0))$ at rate $c/(1-c\kappa)$. 
 
@@ -260,13 +262,21 @@ $$
 \end{aligned}
 \tag{3}
 $$
+
+
 We arbitrarily pick $(x,y)$ such that 
+
+
 $$
 \|x-x_0\| < \tilde{\eta}_x,
 \quad
 \|y-(y_0-A(x_0))\| < \tilde{\eta}_y
 $$
+
+
 Note that 
+
+
 $$
 \|x - x_0\| < \tilde{\eta}_x < \eta_x
 \tag{4}
@@ -283,6 +293,8 @@ D_\mathcal{Y}(y,\Psi_H(x))
 \le\|G(x)-G(x_0)\| + \|y-y_0\| + \|A(x)\|
 \tag{6}
 $$
+
+
 Letting $x_1 = x$, we want to construct a sequence $(x_k)$ that satisfies the properties:
 
 (A) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ $\Leftrightarrow$ $y+A(x_k)\in\Psi_G(x_{k+1})$, 
@@ -301,7 +313,11 @@ $$
  \le (1+\epsilon)c \kappa \cdot \|x_k-x_{k-1}\|
 \end{aligned}
 $$
+
+
 Thus, for all $x_k$ in the sequence $(x_k)$ we have 
+
+
 $$
 \begin{aligned}
 \|x_k-x_1\| 
@@ -311,14 +327,30 @@ $$
 &= \frac{(1+\epsilon)c}{1 - (1+\epsilon)c\kappa} \cdot D_\mathcal{Y}(y,\Psi_H(x_1))
 \end{aligned}
 $$
+
+
 Remember $x_1 = x$, letting $\epsilon\to0$ and we have 
+
+
 $$
 \|x_k-x\| \le c/(1-c\kappa)\cdot D_\mathcal{Y}(y,\Psi_H(x))
 $$
-By (C) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, Condition (A) implies that $y+A(x^*)\in\Psi_G(x^*)$ $\Rightarrow$ $y\in\Psi_H(x^*)$ $\Rightarrow$ $x^*\in\Psi_H^{-1}(y)$. Thus, 
+
+
+By (C) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, Condition (A) implies that 
+$$
+y+A(x^*)\in\Psi_G(x^*) \Rightarrow y\in\Psi_H(x^*) \Rightarrow x^*\in\Psi_H^{-1}(y)
+$$
+
+
+Thus, 
+
+
 $$
 D_\mathcal{X}(x, \Psi_H^{-1}(y)) \le c/(1-c\kappa) \cdot D_\mathcal{Y}(y,\Psi_H(x))
 $$
+
+
 And the proposition is proved. 
 
 Now we want to construct the sequence satisfying conditions (A)-(C). By definition, we can always pick a point $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
@@ -339,10 +371,16 @@ $$
 $$
 
 Then by equation (3) and (6) we have 
+
+
 $$
 \|x_2-x_0\| \le c(1+\epsilon) \cdot D_\mathcal{Y}(y, \Psi_H(x)) + \tilde{\eta}_x < \eta_x
 $$
+
+
 and by (3) we have 
+
+
 $$
 \begin{aligned}
 \|y+A(x_2)-y_0\|
@@ -352,7 +390,10 @@ $$
 $$
 
 
+
 Now suppose we have had $(x_1, ..., x_k)$, $k \ge 2$ that satisfy these conditions. By definition we can always pick $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ such that 
+
+
 $$
 \begin{aligned}
 \|x_{k+1}-x_k\| 
@@ -362,14 +403,24 @@ $$
 \end{aligned}
 $$
 
+
+
 Thus, by equation (3) we have 
+
+
 $$
 \|x_{k+1}-x_0\| \le \frac{(1+\epsilon)c}{1-(1+\epsilon)c\kappa} \cdot D_\mathcal{Y}(y,\Psi_H(x_1)) < \eta_x
 $$
+
+
 and 
+
+
 $$
 \|y+A(x_k)-y_0\| \le \frac{(1+\epsilon)c\kappa}{1-(1+\epsilon)c\kappa}\cdot D_\mathcal{Y}(y,\Psi_H(x))+\tilde{\eta}_y + \kappa\tilde{\eta}_x < \eta_y
 $$
+
+
 Finally, by induction the sequence $(x_k)$ exists. 
 
 <br>
