@@ -253,8 +253,12 @@ $$
 \begin{aligned}
 \tilde{\eta}_x<\eta_x\\
 \tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y\\
-\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y
+\tilde{\eta}_x + c(1+\epsilon) \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right]<\eta_x\\
+\tilde{\eta}_y+\kappa\tilde{\eta}_x+\kappa c(1+\epsilon)\cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right] < \eta_y\\
+\frac{c(1+\epsilon)}{1-(1+\epsilon)c\kappa} \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right]<\eta_x\\
+\tilde{\eta}_y+\kappa\tilde{\eta}_x+\frac{c\kappa(1+\epsilon)}{1-(1+\epsilon)c\kappa} \cdot \left[\sup_{x\in x_0 + \tilde{\eta}_xB_\mathcal{X}}\|G(x)-G(x_0)\| + \tilde{\eta}_y + \kappa\tilde{\eta}_x\right]<\eta_y
 \end{aligned}
+\tag{3}
 $$
 We arbitrarily pick $(x,y)$ such that 
 $$
@@ -265,37 +269,35 @@ $$
 Note that 
 $$
 \|x - x_0\| < \tilde{\eta}_x < \eta_x
+\tag{4}
 $$
 
 $$
 \|y+A(x_1)-y_0\| \le \|y-(y_0-A(x_0))\| + \|A(x_1)-A(x_0)\| < \tilde{\eta}_y + \kappa\tilde{\eta}_x<\eta_y
+\tag{5}
 $$
 
-and 
 $$
-\begin{aligned}
 D_\mathcal{Y}(y,\Psi_H(x)) 
-&= D_Y(G(x)-y-D(x),\mathcal{K})\\
-&\le\|G(x)-G(x_0)\| + \|y-y_0\| + \|D(x)\| < \eta_y
-\end{aligned}
+= D_\mathcal{Y}(G(x)-y-A(x),\mathcal{K})
+\le\|G(x)-G(x_0)\| + \|y-y_0\| + \|A(x)\|
+\tag{6}
 $$
-We construct a sequence $(x_k)$ that satisfies the properties:
+Letting $x_1 = x$, we want to construct a sequence $(x_k)$ that satisfies the properties:
 
-(1) $x_1 = x$,
+(A) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ $\Leftrightarrow$ $y+A(x_k)\in\Psi_G(x_{k+1})$, 
 
-(2) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ $\Leftrightarrow$ $y+A(x_k)\in\Psi_G(x_{k+1})$, 
+(B) $\|x_{k+1}-x_k\| \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
 
-(3) $\|x_{k+1}-x_k\| \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
+(C) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
 
-(4) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
-
-If we can show the existence of such a sequence then (3), (4) and (2) implies that 
+If we can show the existence of such a sequence then (B), (C) and (A) implies that 
 $$
 \begin{aligned}
 \|x_{k+1}-x_k\| 
 &\le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))\\
-&\le (1+\epsilon)c\cdot D_\mathcal{Y}(y_k+A(x_k),\Psi_G(x_k))\\
-&=   (1+\epsilon)c\cdot \|(y+A(x_k)-(y+A(x_{k-1})\|
+&\le (1+\epsilon)c\cdot D_\mathcal{Y}(y+A(x_k),\Psi_G(x_k))\\
+&=   (1+\epsilon)c\cdot \|(y+A(x_k))-(y+A(x_{k-1}))\|
  \le (1+\epsilon)c \kappa \cdot \|x_k-x_{k-1}\|
 \end{aligned}
 $$
@@ -313,17 +315,16 @@ Remember $x_1 = x$, letting $\epsilon\to0$ and we have
 $$
 \|x_k-x\| \le c/(1-c\kappa)\cdot D_\mathcal{Y}(y,\Psi_H(x))
 $$
-By (4) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, (2) implies that $y+A(x^*)\in\Psi_G(x^*)$ $\Rightarrow$ $y\in\Psi_H(x^*)$ $\Rightarrow$ $x^*\in\Psi_H^{-1}(y)$. Thus, 
+By (C) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, Condition (A) implies that $y+A(x^*)\in\Psi_G(x^*)$ $\Rightarrow$ $y\in\Psi_H(x^*)$ $\Rightarrow$ $x^*\in\Psi_H^{-1}(y)$. Thus, 
 $$
 D_\mathcal{X}(x, \Psi_H^{-1}(y)) \le c/(1-c\kappa) \cdot D_\mathcal{Y}(y,\Psi_H(x))
 $$
 And the proposition is proved. 
 
-Now we want to construct the sequence satisfying (1)-(4). Letting $x_1=x$ and we have
+Now we want to construct the sequence satisfying conditions (A)-(C). By definition, we can always pick a point $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
 
-Thus, (1) and (4) holds for $x_1$. We can always pick a point $x_2\in\Psi_G^{-1}(y+A(x_1))$ such that 
 $$
-\|x_2 - x_1\| \le (1+\epsilon) \cdot D_\mathcal{Y}(x_1,\Psi_H^{-1}(y+A(x_1)))
+\|x_2 - x_1\| \le (1+\epsilon) \cdot D_\mathcal{Y}(x_1,\Psi_G^{-1}(y+A(x_1)))
 $$
 
 
@@ -331,28 +332,44 @@ Then by metric regularity of $\Psi_G$ at $(x_0, y_0)$ we have
 $$
 \begin{aligned}
 \|x_2 - x_1\| 
-&\le (1+\epsilon)\cdot D_\mathcal{X}(x_1, \Psi_G^{-1}(y+A(x_1)))\\
 &\le (1+\epsilon)\cdot c \cdot D_\mathcal{Y}(y+A(x_1),\Psi_G(x_1))\\
-&=   (1+\epsilon)\cdot c \cdot D_\mathcal{Y}(y,G(x)-A(x)-\mathcal{K}) = c(1+\epsilon) \cdot D_\mathcal{Y}(y, \Psi_H(x))
+&=   (1+\epsilon)\cdot c \cdot D_\mathcal{Y}(y,G(x)-A(x)-\mathcal{K}) 
+ = c(1+\epsilon) \cdot D_\mathcal{Y}(y, \Psi_H(x))
 \end{aligned}
 $$
 
-Now suppose we have had $(x_1, ..., x_k)$, $k \ge 2$ that satisfy the conditions. By property (3) we have 
+Then by equation (3) and (6) we have 
+$$
+\|x_2-x_0\| \le c(1+\epsilon) \cdot D_\mathcal{Y}(y, \Psi_H(x)) + \tilde{\eta}_x < \eta_x
+$$
+and by (3) we have 
 $$
 \begin{aligned}
-D_\mathcal{X}(x_k, \Psi_G^{-1}(y+A(x_k))) 
-&\le c \cdot D_\mathcal{Y}(y+A(x_k),\Psi_G(x_k))\\
-&\le c \cdot \| (y + A(x_k)) - (y + A(x_{k-1})) \| \le c\kappa \cdot \|x_k-x_{k-1}\|
+\|y+A(x_2)-y_0\|
+&\le \|y+A(x_2)-y-A(x_1)\|+\|y+A(x_1)-y_0\|\\
+&\le \kappa\cdot c(1+\epsilon)\cdot D_\mathcal{Y}(y,\Psi_H(x)) + \tilde{\eta}_y+\kappa\tilde{\eta}_x < \eta_y
 \end{aligned}
 $$
-Thus we can pick $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ such that 
+
+
+Now suppose we have had $(x_1, ..., x_k)$, $k \ge 2$ that satisfy these conditions. By definition we can always pick $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ such that 
 $$
-\|x_{k+1}-x_k\| \le c\kappa \cdot (1+\epsilon) \cdot \|x_k - x_{k-1}\|
+\begin{aligned}
+\|x_{k+1}-x_k\| 
+&\le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))\\
+&\le c(1+\epsilon)\cdot D_\mathcal{Y}(y+A(x_k),\Psi_G(x_k))
+ \le (1+\epsilon)c\kappa\cdot\|x_k-x_{k-1}\|
+\end{aligned}
 $$
 
-
-
-
-
+Thus, by equation (3) we have 
+$$
+\|x_{k+1}-x_0\| \le \frac{(1+\epsilon)c}{1-(1+\epsilon)c\kappa} \cdot D_\mathcal{Y}(y,\Psi_H(x_1)) < \eta_x
+$$
+and 
+$$
+\|y+A(x_k)-y_0\| \le \frac{(1+\epsilon)c\kappa}{1-(1+\epsilon)c\kappa}\cdot D_\mathcal{Y}(y,\Psi_H(x))+\tilde{\eta}_y + \kappa\tilde{\eta}_x < \eta_y
+$$
+Finally, by induction the sequence $(x_k)$ exists. 
 
 <br>
