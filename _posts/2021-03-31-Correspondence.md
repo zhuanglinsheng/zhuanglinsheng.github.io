@@ -32,7 +32,7 @@ Briefly speaking, a set map (correspondence) can be perturbed around metric regu
 
 [There are some simple missing logics: Since $y'\in \text{int}(cl(P))$ $\Leftrightarrow$ $y'+\epsilon B_\mathcal{Y} \subset cl(P)$ for some $\epsilon>0$, for all $y \in y'+\epsilon/2 B_\mathcal{Y}$ we have $y \in \text{int}(cl(P))$, because $y+\epsilon/4 B_\mathcal{Y}\subset y'+\epsilon B_\mathcal{Y}$. Thus, if we can show $y'\in P$ then we actually have showed that $y\in P$, which implies that $y'\in \text{int}(P)$.] 
 
-Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\|r_0\| \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\|x_0\| \le \gamma$. For $k=0$ we have 
+Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\|r_0\| \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\Vert x_0\Vert \le \gamma$. For $k=0$ we have 
 
 
 $$
@@ -54,7 +54,7 @@ $$
 
 so that $(x_k)$ is Cauchy sequence. By completeness of $X$ we know $x_k\to x'$ for some $x'$. Also, $y_k\to y'$ by the construction (1). Since $\mathcal{C}$ is closed we have $(x',y')\in\mathcal{C}$. 
 
-Now suppose that (1) holds for some $n\ge0$. Then $\|(2-2^{-n})r_n\| \le (2-2^{-n})(\frac{\epsilon}{2})<\epsilon$ implies that 
+Now suppose that (1) holds for some $n\ge0$. Then $\Vert(2-2^{-n})r_n\Vert \le (2-2^{-n})(\frac{\epsilon}{2})<\epsilon$ implies that 
 
 
 $$
@@ -234,13 +234,13 @@ where $D_\mathcal{X}(.,.)$ and $D_{\mathcal{Y}}(.,.)$ are the minimum distance b
 
 ***Proof.*** 
 
-"$\Rightarrow$". Suppose $\Psi$ is metric regular at $(x_0,y_0)$ at rate $c>0$, then there exists a neighborhood $\mathcal{N}$ of $(x_0,y_0)$ such that $D_\mathcal{X}(x,\Psi^{-1}(y))\le c\cdot D_\mathcal{Y}(y,\Psi(x))$ for all $(x,y)\in\mathcal{N}$. For all $(x,y)\in gph(\Psi)\cap\mathcal{N}$ and for all $z \in\mathcal{Y}$ and $t>0$ such that $(x,z)\in \mathcal{N}$ and $\|z-y\| \le t/c$ we have 
+"$\Rightarrow$". Suppose $\Psi$ is metric regular at $(x_0,y_0)$ at rate $c>0$, then there exists a neighborhood $\mathcal{N}$ of $(x_0,y_0)$ such that $D_\mathcal{X}(x,\Psi^{-1}(y))\le c\cdot D_\mathcal{Y}(y,\Psi(x))$ for all $(x,y)\in\mathcal{N}$. For all $(x,y)\in gph(\Psi)\cap\mathcal{N}$ and for all $z \in\mathcal{Y}$ and $t>0$ such that $(x,z)\in \mathcal{N}$ and $\Vert z-y\Vert \le t/c$ we have 
 
 $$
 D_\mathcal{X}(x,\Psi^{-1}(z)) \le c \cdot D_\mathcal{Y}(z,\Psi(x)) \le c \cdot \|z-y\| \le t
 $$
 
-Thus, there exists $w\in \Psi^{-1}(z)$ with $\|x-w\| \le t$. Thus we have $z\in \Psi(x+tB_\mathcal{X})$. 
+Thus, there exists $w\in \Psi^{-1}(z)$ with $\Vert x-w\Vert \le t$. Thus we have $z\in \Psi(x+tB_\mathcal{X})$. 
 
 "$\Leftarrow$". Suppose $\Psi$ is open at $(x_0,y_0)$ at rate $1/c$, then there exists $t_0>0$ and $\mathcal{N}$ around $(x_0,y_0)$ such that for all $t\in [0,t_0]$ and $(x,y)\in gph(\Psi)\cap \mathcal{N}$ we have 
 
@@ -250,7 +250,7 @@ $$
 
 Select $t_0$ small enough so that $B_{2t_0/c}(x_0,y_0) \subset \mathcal{N}$. 
 
-Since $(x,y)$ can be picked as $(x_0,y_0)$, we have for all $(x,y)\in B_r(x_0,y_0)$ with $2r/c + r\le t_0/c$ there exists $u\in x + tB_\mathcal{X}$ such that $y\in\Psi(u)$ and $t = c\cdot \|y-y_0\| < r$. Then, 
+Since $(x,y)$ can be picked as $(x_0,y_0)$, we have for all $(x,y)\in B_r(x_0,y_0)$ with $2r/c + r\le t_0/c$ there exists $u\in x + tB_\mathcal{X}$ such that $y\in\Psi(u)$ and $t = c\cdot \Vert y-y_0\Vert < r$. Then, 
 
 $$
 D_\mathcal{X}(x,\Psi^{-1}(z)) \le \|x-u\| \le \|x-x_0\| + \|u-x_0\| \le r + t
@@ -264,13 +264,13 @@ $$
 \|y - y_\alpha\| \le D_\mathcal{Y}(y,\Psi(x)) + \alpha \le (r+t)/c < 2r/c < t_0 / c
 $$
 
-Then $y_\alpha \in B_{t_0/c}(y_0)$ since $\|x-x_0\| \le r < t_0/c$ and 
+Then $y_\alpha \in B_{t_0/c}(y_0)$ since $\Vert x-x_0\Vert \le r < t_0/c$ and 
 
 $$
 \|y_\alpha - y_0\| \le \|y - y_\alpha\| + \|y - y_0\| \le (r+t)/c + r \le 2r/c + r \le t_0 / c
 $$
 
-Finally we have $(x,y_\alpha) \in gph(\Psi) \cap \mathcal{N}$. By the openness of $\Psi$ at $(x,y_\alpha)$ there exists $u_\alpha \in x + t_\alpha B_\mathcal{X}$ such that $y\in\Psi(u_\alpha)$ and $t_\alpha = c\cdot \|y-y_\alpha\|$. Then 
+Finally we have $(x,y_\alpha) \in gph(\Psi) \cap \mathcal{N}$. By the openness of $\Psi$ at $(x,y_\alpha)$ there exists $u_\alpha \in x + t_\alpha B_\mathcal{X}$ such that $y\in\Psi(u_\alpha)$ and $t_\alpha = c\cdot \Vert y-y_\alpha\Vert$. Then 
 
 $$
 D_\mathcal{X}(x,\Psi^{-1}(y)) \le \|x-x_\alpha\| \le t_\alpha = c\cdot \|y-y_\alpha\| \le c\cdot D_\mathcal{Y}(y,\Psi(x)) + c\alpha
@@ -366,7 +366,7 @@ Letting $x_1 = x$, we want to construct a sequence $(x_k)$ that satisfies the pr
 
 (A) $x_{k+1}\in\Psi_G^{-1}(y+A(x_k))$ $\Leftrightarrow$ $y+A(x_k)\in\Psi_G(x_{k+1})$, 
 
-(B) $\|x_{k+1}-x_k\| \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
+(B) $\Vert x_{k+1}-x_k\Vert \le (1+\epsilon) \cdot D_\mathcal{X}(x_k,\Psi_G^{-1}(y+A(x_k)))$, 
 
 (C) $x_k\in B(x_0,\eta_x)$ and $y + A(x_k)\in B(y_0,\eta_y)$. 
 

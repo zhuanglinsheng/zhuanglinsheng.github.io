@@ -21,11 +21,27 @@ This note summarize the [Section 5.1-5.2](https://link.springer.com/chapter/10.1
 
 ## 1. Fejér Monotone Sequence
 
-**Def. 5.1 (Fejér Monotonicity)** Let $C$ be a nonemoty subset of $\mathcal{H}$ and let $(x_n)$ be a sequence in $\mathcal{H}$. Then $(x_n)$ is Fejér monotone w.r.t. $C$ if $\|x_{n+1}-x\| \le \|x_n-x\|$ for all $x\in C$ and $n\in N$. 
+**Def. 5.1 (Fejér Monotonicity)** Let $C$ be a nonemoty subset of $\mathcal{H}$ and let $(x_n)$ be a sequence in $\mathcal{H}$. Then $(x_n)$ is Fejér monotone w.r.t. $C$ if 
+
+
+$$
+\|x_{n+1}-x\| \le \|x_n-x\|
+$$
+
+
+for all $x\in C$ and $n\in N$. 
 
 **Example 5.2** A bounded increasing sequence $(x_n)$ is Fejér Monotone with respect to the set $(\sup x_n, +\infty)$. 
 
-**Definition (Quasi-nonexpansiveness)** For any $\emptyset\not=D\subset\mathcal{H}$, an operator $T:D\to D$ such that $\text{Fix}(T)\not=\emptyset$ is [quasi-nonexpansive](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S144678870001123X) if $\|Tx-p\| \le \|x-p\|$ for all $x\in D$ and $p\in\text{Fix}(T)$. 
+**Definition (Quasi-nonexpansiveness)** For any $\emptyset\not=D\subset\mathcal{H}$, an operator $T:D\to D$ such that $\text{Fix}(T)\not=\emptyset$ is [quasi-nonexpansive](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S144678870001123X) if  
+
+
+$$
+\|Tx-p\| \le \|x-p\|
+$$
+
+
+for all $x\in D$ and $p\in\text{Fix}(T)$. 
 
 **Note.** Non-expansiveness implies quasi-non-expansiveness: 
 
@@ -41,11 +57,11 @@ for all $p\in\text{Fix}(T)$.
 
 **Proposition 5.4 (Fejér monotonicity; General Set)** Let $\emptyset\not=C\subset\mathcal{H}$. Suppose $(x_n)\subset\mathcal{H}$ is Fejér monotone with respect to $C$. Then 
 
-i) $(x_n)$ is bounded by $B(x,\|x_0-x\|)$ for any $x\in C$ 
+i) $(x_n)$ is bounded by $B(x,\Vert x_0-x\Vert)$ for any $x\in C$ 
 
 ***Proof.*** By definition 5.1. 
 
-ii) For every $x\in C$ we have $(\|x_n-x\|)$ converges 
+ii) For every $x\in C$ we have $(\Vert x_n-x \Vert)$ converges 
 
 ***Proof.*** By definition 5.1. 
 
@@ -57,9 +73,9 @@ $$
 \|x_{n+1}-P_C(x_n)\| \ge \|x_{n+1}-P_C(x_{n+1})\| > \|x_n-P_C(x_n)\|
 $$
 
-iv) $\|x_{n+m}-x_n\| \le 2d_C(x_n)$ for all $m,n\in N$. 
+iv) $\Vert x_{n+m}-x_n \Vert \le 2d_C(x_n)$ for all $m,n\in N$. 
 
-***Proof.*** $\|x_{n+m}-x_n\| \le \|x_{n+m}-x\| + \|x_n-x\| \le 2\|x_n-x\|$ for all $x\in C$. 
+***Proof.*** $\Vert x_{n+m}-x_n \Vert \le \Vert x_{n+m}-x \Vert + \Vert x_n-x \Vert \le 2\Vert x_n-x \Vert$ for all $x\in C$. 
 
 <br>
 
@@ -80,7 +96,7 @@ $$
 \end{aligned}
 $$
 
-The first inequality is because $\|P_C(x_n)-x_{n+m}\| \le \|P_C(x_n)-x_n\|$ (Fejér monotonicity). The second inequality is because $\langle P_C(x_n)-P_C(x_{n+m}), x_{n+m}-P_C(x_{n+m}) \rangle \le 0$ (metric projection). By 5.4 (iii) we have $(d_C(x_n))$ decreasing and converge, $(P_C(x_n))$ is a Cauchy sequence. 
+The first inequality is because $\Vert P_C(x_n)-x_{n+m}\Vert \le \Vert P_C(x_n)-x_n\Vert$ (Fejér monotonicity). The second inequality is because $\langle P_C(x_n)-P_C(x_{n+m}), x_{n+m}-P_C(x_{n+m}) \rangle \le 0$ (metric projection). By 5.4 (iii) we have $(d_C(x_n))$ decreasing and converge, $(P_C(x_n))$ is a Cauchy sequence. 
 
 **Proposition 5.9 (Shadow Sequence; Fejér monotonicity; Closed Affine Subspace)** Let $C\subset\mathcal{H}$ is a closed affine subspace. Suppose $(x_n)\subset\mathcal{H}$ is Fejér monotone with respect to $C$. Then $P_C(x_n) = P_C(x_0)$ for all $n\in N$. 
 
@@ -106,13 +122,13 @@ $$
 \end{aligned}
 $$
 
-which implies that $(2\alpha - 1) \|P_C(x_n) - P_C(x_0)\|^2 \le d_C(x_0)^2$. Letting $\alpha \to +\infty$ and we have $P_C(x_n) = P_C(x_0)$. 
+which implies that $(2\alpha - 1) \Vert P_C(x_n) - P_C(x_0)\Vert^2 \le d_C(x_0)^2$. Letting $\alpha \to +\infty$ and we have $P_C(x_n) = P_C(x_0)$. 
 
 <br>
 
 ## 3. Convergence of Fejér Monotone Sequence
 
-**Proposition 5.10 (Convergence; Fejér monotonicity; Nonempty Interior; Raik)** Let $C\subset\mathcal{H}$ such that $\text{int}(C)\not=\emptyset$. Suppose $(x_n)\subset\mathcal{H}$ is Fejér monotone with respect to $C$. Then $(x_n)$ converges strongly and $\sum_n\|x_{n+1}-x_n\| < +\infty$. 
+**Proposition 5.10 (Convergence; Fejér monotonicity; Nonempty Interior; Raik)** Let $C\subset\mathcal{H}$ such that $\text{int}(C)\not=\emptyset$. Suppose $(x_n)\subset\mathcal{H}$ is Fejér monotone with respect to $C$. Then $(x_n)$ converges strongly and $\sum_n\Vert x_{n+1}-x_n \Vert < +\infty$. 
 
 ***Proof.*** Pick $x\in \text{int}(C)$ and $\rho > 0$ such that $B(x,\rho) \subset C$. Define a sequence $(z_n)\subset B(x,\rho)$ by 
 
@@ -123,7 +139,7 @@ x - \rho\frac{x_{n+1}-x_n}{\|x_{n+1}-x_n\|},&\text{otherwise}
 \end{cases}
 $$
 
-Then $\|x_{n+1}-z_n\|^2 \le \|x_n-z_n\|^2$ for all $(x_n)$ that is Fejér monotone with respect to $C$ and for all $n\in N$. We have 
+Then $\Vert x_{n+1}-z_n \Vert^2 \le \Vert x_n-z_n \Vert^2$ for all $(x_n)$ that is Fejér monotone with respect to $C$ and for all $n\in N$. We have 
 
 $$
 \begin{aligned}
@@ -157,7 +173,7 @@ iii) $\underline{\lim}d_C(x_n) = 0$.
 
 i) $\Rightarrow$ ii): Statement ii) is equivalent to say that $(x_n)$ has a sub-sequence that converges to a point in $C$. 
 
-ii) $\Rightarrow$ iii): Suppose $x_{k_n}\to x\in C$ then $d_C(x_{k_n}) \le \|x_{k_n} - x\| \to 0$. 
+ii) $\Rightarrow$ iii): Suppose $x_{k_n}\to x\in C$ then $d_C(x_{k_n}) \le \Vert x_{k_n} - x \Vert \to 0$. 
 
 iii) $\Rightarrow$ i): By 5.4 (iii) we know $(d_C(x_n))$ is decreasing and convergent, then $\underline{\lim} d_C(x_n) = 0$ implies that $d_C(x_n)\to 0$. By proposition 5.7 we have $(P_C(x_n))$ converges strongly to some point in $C$, say $P_C(x_n) \to x\in C$, then 
 
@@ -185,7 +201,7 @@ $$
 \|x_{n} - x_{n+m}\| \le 2d_C(x_n)
 $$
 
-Let $m\to +\infty$ and we have $\|x_n - x\| \le 2d_C(x_n) \le 2\kappa^1 d_C(x_{n-1}) \le ... \le 2 \kappa^n d_C(x_0)$. 
+Let $m\to +\infty$ and we have $\Vert x_n - x \Vert \le 2d_C(x_n) \le 2\kappa^1 d_C(x_{n-1}) \le ... \le 2 \kappa^n d_C(x_0)$. 
 
 <br>
 
@@ -222,21 +238,21 @@ ii) Suppose that $D = -D$ and that $T$ is odd: $T(-x) = -T(x)$ for all $x\in D$.
 
 i) Let $x$ to be a weak cluster point such that $x_{k_n} \rightharpoonup x$. Since $x_{k_n}-T(x_{k_n})\to 0$ we have $x\in \text{Fix}(T)$ by Corollary 4.18. Then by Theorem 5.5 we have $x_n\rightharpoonup \tilde{x} \in \text{Fix}(T)$. 
 
-ii) Since $D = -D$ and $D$ is convex we must have $0 = 0.5x + 0.5(-x)\in D$ for all $x\in D$. Since $T$ is odd we must have $T(0) = T(-0) = -T(0) \Rightarrow T(0) = 0$. Thus, $0\in\text{Fix}(T)$. Thus, by Fejér monotonicity we have $\|x_{n+1}\| \le \|x_n\|$. Thus, $(\|x_n\|)$ is decreasing and converges to some point $\ell \ge 0$. For any $m,n\in N$ we have 
+ii) Since $D = -D$ and $D$ is convex we must have $0 = 0.5x + 0.5(-x)\in D$ for all $x\in D$. Since $T$ is odd we must have $T(0) = T(-0) = -T(0) \Rightarrow T(0) = 0$. Thus, $0\in\text{Fix}(T)$. Thus, by Fejér monotonicity we have $\Vert x_{n+1} \Vert \le \Vert x_n \Vert$. Thus, $(\Vert x_n \Vert)$ is decreasing and converges to some point $\ell \ge 0$. For any $m,n\in N$ we have 
 
 $$
 \|x_{n+m+1} + x_{n+1}\| = \|T(x_{n+m})-T(-x_n)\| \le \|x_{n+m}+x_n\|
 \tag{5.10}
 $$
 
-Thus, $(\|x_{n+m}+x_n\|)_{n\in N}$ is decreasing for all given $m\in N$. Also we have the identity 
+Thus, $(\Vert x_{n+m}+x_n \Vert)_{n\in N}$ is decreasing for all given $m\in N$. Also we have the identity 
 
 $$
 \|x_{n+m}+x_n\|^2 = 2(\|x_{n+m}\|^2+\|x_m\|^2) - \|x_{n+m}-x_n\|^2
 \tag{5.11}
 $$
 
-Since $T(x_n)-x_n\to 0$ we have $\lim_{n}\|x_{n+m}-x_n\|=0$. Thus, $\|x_{n+m}+x_n\|^2 \downarrow 2(\ell^2+\|x_m\|^2)$ as $n\to+\infty$ for any given $m\in N$. Thus, $\|x_{n+m}-x_n\|^2\to 4\ell^2-4\ell^2 = 0$ as $m,n\to+\infty$. Thus, $(x_n)$ is a Cauchy sequence and $x_n\to x\in\mathcal{H}$. Since $x\leftarrow x_{n+1}=T(x_n)\to T(x)$ we have $x\in\text{Fix}(T)$. 
+Since $T(x_n)-x_n\to 0$ we have $\lim_{n}\Vert x_{n+m}-x_n \Vert=0$. Thus, $\Vert x_{n+m}+x_n \Vert^2 \downarrow 2(\ell^2+\Vert x_m \Vert^2)$ as $n\to+\infty$ for any given $m\in N$. Thus, $\Vert x_{n+m}-x_n \Vert^2\to 4\ell^2-4\ell^2 = 0$ as $m,n\to+\infty$. Thus, $(x_n)$ is a Cauchy sequence and $x_n\to x\in\mathcal{H}$. Since $x\leftarrow x_{n+1}=T(x_n)\to T(x)$ we have $x\in\text{Fix}(T)$. 
 
 <br>
 
@@ -279,13 +295,13 @@ $$
 
 The inequality is by the non-expansiveness of $T$. 
 
-ii) From (5.13) we have $\lambda_n(1-\lambda_n)\|Tx_n-x_n\|^2 \le \|x_n-y\|^2 - \|x_{n+1}-y\|^2$. Then 
+ii) From (5.13) we have $\lambda_n(1-\lambda_n)\Vert Tx_n-x_n \Vert^2 \le \Vert x_n-y \Vert^2 - \Vert x_{n+1}-y \Vert^2$. Then 
 
 $$
 \sum_n \lambda_n(1-\lambda_n)\|Tx_n-x_n\|^2 \le \|x_0-y\|^2 
 $$
 
-Since $\sum_n\lambda_n(1-\lambda_n) = +\infty$ we must have $\underline{\lim}\|Tx_n-x_n\|=0$. And 
+Since $\sum_n\lambda_n(1-\lambda_n) = +\infty$ we must have $\underline{\lim}\Vert Tx_n-x_n \Vert=0$. And 
 
 $$
 \begin{aligned}
@@ -321,9 +337,9 @@ i) $T$ is $\alpha$-averaged.
 
 ii) $R\equiv(1-1/\alpha)\text{Id}+(1/\alpha)T$ is non-expansive. 
 
-iii) $\|T(x)-T(y)\|^2 \le \|x-y\|^2 - \frac{1-\alpha}{\alpha}\|(\text{Id}-T)x-(\text{Id}-T)y\|^2$ for all $x, y\in D$. 
+iii) $\Vert T(x)-T(y) \Vert^2 \le \Vert x-y \Vert^2 - \frac{1-\alpha}{\alpha} \Vert(\text{Id}-T)x-(\text{Id}-T)y \Vert^2$ for all $x, y\in D$. 
 
-iv) $\|T(x) - T(y)\|^2 + (1-2\alpha)\|x-y\|^2 \le 2(1-\alpha)\langle x-y,T(x) - T(y)\rangle$ for all $x,y\in D$. 
+iv) $\Vert T(x) - T(y)\Vert^2 + (1-2\alpha)\Vert x-y\Vert^2 \le 2(1-\alpha)\langle x-y,T(x) - T(y)\rangle$ for all $x,y\in D$. 
 
 **Proposition 5.15 (Weak Convergence; $\alpha$-Averaged Operator)** Let $\alpha\in[0,1]$ and $T:\mathcal{H}\to\mathcal{H}$ be an $\alpha$-averaged operator such that $\text{Fix}(T)\not=\emptyset$. Let $(\lambda_n)$ be a sequence in $[0,1/\alpha]$ with $\sum_n\lambda_n(1-\alpha\lambda_n)= +\infty$. Let $x_0\in\mathcal{H}$ and set 
 
