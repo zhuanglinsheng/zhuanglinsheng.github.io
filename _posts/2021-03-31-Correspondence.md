@@ -32,7 +32,7 @@ Briefly speaking, a set map (correspondence) can be perturbed around metric regu
 
 [There are some simple missing logics: Since $y'\in \text{int}(cl(P))$ $\Leftrightarrow$ $y'+\epsilon B_\mathcal{Y} \subset cl(P)$ for some $\epsilon>0$, for all $y \in y'+\epsilon/2 B_\mathcal{Y}$ we have $y \in \text{int}(cl(P))$, because $y+\epsilon/4 B_\mathcal{Y}\subset y'+\epsilon B_\mathcal{Y}$. Thus, if we can show $y'\in P$ then we actually have showed that $y\in P$, which implies that $y'\in \text{int}(P)$.] 
 
-Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\|r_0\| \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\Vert x_0\Vert \le \gamma$. For $k=0$ we have 
+Choose $(x_0, y_0)\in\mathcal{C}$ so that $y_0 = y'+r_0$ where $\Vert r_0\Vert \le \frac{\epsilon}{2}$. (That is because $y'\in cl(P_\mathcal{Y}(\mathcal{C}))$ and thus there exists a sequence in $P_\mathcal{Y}(\mathcal{C})$ converging to $y'$, so we can choose such a point $(x_0,y_0)$ from $\mathcal{C}$). Define $x_{-1} = x_0$ and note that $\Vert x_0\Vert \le \gamma$. For $k=0$ we have 
 
 
 $$
@@ -71,7 +71,7 @@ $$
 
 
 
-We also have $\|u\|\le \gamma$. Define 
+We also have $\Vert u \Vert \le \gamma$. Define 
 
 
 $$
@@ -117,13 +117,13 @@ $$
 
 
 
-**Proposition 2. ([Robinson, 1976](https://pubsonline.informs.org/doi/10.1287/moor.1.2.130))** Suppose $\mathcal{X}$ and $\mathcal{Y}$ are Banach spaces and the correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is closed and convex. If $y\in \text{int}(range(\Psi))$ then for any $x\in\Psi^{-1}(y)$ we have $y\in \text{int}(\Psi(x+rB_{\mathcal{X}}))$ for all $r\in[0,1]$. 
+**Proposition 2. ([Robinson, 1976](https://pubsonline.informs.org/doi/10.1287/moor.1.2.130))** Suppose $\mathcal{X}$ and $\mathcal{Y}$ are Banach spaces and the correspondence $\Psi:\mathcal{X}\rightrightarrows\mathcal{Y}$ is closed and convex. If $y\in \text{int}(\text{range}(\Psi))$ then for any $x\in\Psi^{-1}(y)$ we have $y\in \text{int}(\Psi(x+rB_{\mathcal{X}}))$ for all $r\in[0,1]$. 
 
 ***Proof.*** 
 
 By translating the origin we can simply consider $x= 0$ and $y = 0$, and $0\in \Psi(0)$ by assumption. We want to first show that $0 \in \text{int}(\Psi(B_\mathcal{X}))$ (the case when $r=1$). Consider $Z = cl(\Psi(\frac{1}{2}B_\mathcal{X}))$ which is nonempty, closed and convex. 
 
-Firstly, we want to show that $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing. Since $0\in \text{int}(range(\Psi))$, for all $y\in\mathcal{Y}$ there is some $\alpha>0$ such that $\alpha y\in range(\Psi)$. Hence, $\alpha y\in\Psi(x)$ for some $x$. Thus, 
+Firstly, we want to show that $\Psi(\frac{1}{2}B_\mathcal{X})$ is absorbing. Since $0\in \text{int}(\text{range}(\Psi))$, for all $y\in\mathcal{Y}$ there is some $\alpha>0$ such that $\alpha y\in \text{range}(\Psi)$. Hence, $\alpha y\in\Psi(x)$ for some $x$. Thus, 
 
 
 $$
@@ -169,7 +169,7 @@ $$
 
 
 
-**Proposition 3.** Suppose $\Psi:\mathcal{X}\rightrightarrows \mathcal{Y}$ is closed and convex, then $\Psi$ is open at $(x_0,y_0)$ if and only if $y_0\in \text{int}(range(\Psi))$. 
+**Proposition 3.** Suppose $\Psi:\mathcal{X}\rightrightarrows \mathcal{Y}$ is closed and convex, then $\Psi$ is open at $(x_0,y_0)$ if and only if $y_0\in \text{int}(\text{range}(\Psi))$. 
 
 ***Proof.*** 
 
@@ -177,14 +177,14 @@ $$
 
 
 $$
-y_0+\gamma t_0 B_\mathcal{Y} \subset \Psi(x_0+t_0 B_\mathcal{X}) \subset range(\Psi)
+y_0+\gamma t_0 B_\mathcal{Y} \subset \Psi(x_0+t_0 B_\mathcal{X}) \subset \text{range}(\Psi)
 $$
 
 
 
-which implies that $y_0\in \text{int}(range(\Psi))$. 
+which implies that $y_0\in \text{int}(\text{range}(\Psi))$. 
 
-"$\Leftarrow$" Suppose $(x_0,y_0)\in gph(\Psi)$ and $y_0\in \text{int}(range(\Psi))$. We want to show that $\Psi$ is open at $(x_0,y_0)$. By Proposition 2 we have $y_0\in \text{int}(\Psi(x_0+B_{\mathcal{X}}))$. Thus, there exists $\gamma>0$ such that 
+"$\Leftarrow$" Suppose $(x_0,y_0)\in gph(\Psi)$ and $y_0\in \text{int}(\text{range}(\Psi))$. We want to show that $\Psi$ is open at $(x_0,y_0)$. By Proposition 2 we have $y_0\in \text{int}(\Psi(x_0+B_{\mathcal{X}}))$. Thus, there exists $\gamma>0$ such that 
 
 
 $$
@@ -406,7 +406,7 @@ $$
 $$
 
 
-By (C) there exists a subsequence of $(x_k)$ that converges to $x^*$. Since $\Psi_G$ is closed, Condition (A) implies that 
+By (C) there exists a subsequence of $(x_k)$ that converges to $x^\star$. Since $\Psi_G$ is closed, Condition (A) implies that 
 
 
 $$
