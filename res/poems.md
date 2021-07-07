@@ -3,6 +3,10 @@ layout: default
 title: Poems
 ---
 
+2021年06月25日《[酷夏，所有快乐时光](https://zhuanglinsheng.github.io/res/poems/2021-06-25.html)》
+
+2021年06月20日《[晚秋，从来不曾错过](https://zhuanglinsheng.github.io/res/poems/2021-06-20.html)》
+
 2021年06月13日《[雨中漫步](https://zhuanglinsheng.github.io/res/poems/2021-06-13.html)》
 
 2021年04月21日《[四月底的某个周末](https://zhuanglinsheng.github.io/res/poems/2021-04-21.html)》
