@@ -3,6 +3,8 @@ layout: default
 title: Poems
 ---
 
+2021年11月02日《[夜读红楼](https://zhuanglinsheng.github.io/res/poems/2021-11-02.html)》
+
 2021年06月25日《[酷夏，所有快乐时光](https://zhuanglinsheng.github.io/res/poems/2021-06-25.html)》
 
 2021年06月20日《[晚秋，从来不曾错过](https://zhuanglinsheng.github.io/res/poems/2021-06-20.html)》
