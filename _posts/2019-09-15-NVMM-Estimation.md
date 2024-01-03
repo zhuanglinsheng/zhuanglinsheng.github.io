@@ -167,7 +167,7 @@ with a constant $K$ depending on $p$ and $\Lambda(M, p)$ only. <br>
 
 #### 2. Estimate $G$
 
-In this section, we want to estimate the density function $g$ of $G$, from observations $x_1, x_2, ...$ of random variable $X\sim p(x;\mu,G)$, supposing $\mu$ is known. Based on the [introduction](h{{ site.url }}/paper_notes/2019/09/14/Normal-Variance-Mean-Mixture-Properties.html) note, we know the characteristic function of $X=\mu s+\sqrt{s}\eta $ is
+In this section, we want to estimate the density function $g$ of $G$, from observations $x_1, x_2, ...$ of random variable $X\sim p(x;\mu,G)$, supposing $\mu$ is known. Based on the [introduction]({{ site.url }}/paper_notes/2019/09/14/Normal-Variance-Mean-Mixture-Properties.html) note, we know the characteristic function of $X=\mu s+\sqrt{s}\eta $ is
 
 
 $$
@@ -257,7 +257,7 @@ and $U_n$ is sequence of positive numbers tending to infinity as $n\to\infty$. <
 
 #### Relative notes
 
-[An inroduction to Normal variance-mean mixture](h{{ site.url }}/2019/09/14/NVMM-Properties.html)
+[An inroduction to Normal variance-mean mixture]({{ site.url }}/2019/09/14/NVMM-Properties.html)
 
 <br>
 
@@ -303,7 +303,7 @@ About EM Algorithm:<br>
 
 [11] [Denis Belomestny and Vladimir Panov. (2018)](https://arxiv.org/pdf/1705.07578.pdf)<br>
 
-[12] [My notes about the above paper.](h{{ site.url }}/paper_notes/2019/09/17/Normal-Variance-Mean-Mixture-Statistics-1.html)<br>
+[12] [My notes about the above paper.]({{ site.url }}/paper_notes/2019/09/17/Normal-Variance-Mean-Mixture-Statistics-1.html)<br>
 
 [13] [R. G. Campos,  F. Mejia (2007): Quadrature formulas for the Laplace and Mellin transforms.](https://arxiv.org/pdf/0704.2842.pdf)<br>
 

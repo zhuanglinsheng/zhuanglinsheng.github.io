@@ -242,4 +242,4 @@ where $K_p(.)$ is modified Bessel function of the second kind with index $p$.
 
 #### Relative notes
 
-[Normal variance-mean mixture: Estimation.](h{{ site.url }}/2019/09/15/NVMM-Estimation.html)
+[Normal variance-mean mixture: Estimation.]({{ site.url }}/2019/09/15/NVMM-Estimation.html)
