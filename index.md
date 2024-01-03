@@ -1,8 +1,6 @@
 ---
-layout: default
+layout: home
 ---
-
-# {{ site.title }}
 
 <img title="2020" alt="Alt text" src="res/cv/Me.jpg" style="width:200px;">
 
@@ -20,8 +18,7 @@ My research interest is broad, including stochastic modeling, optimization theor
 
 ## Hobbies
 
-- Occasionally I write [blogs](https://zhuanglinsheng.github.io/res/blogs.html) as a record of my study.
-- Recently I learned to write [poems](https://zhuanglinsheng.github.io/res/poems.html) to get some relax.
+- Occasionally I write [blogs]({{ site.url }}/res/blogs.html) as a record of my study.
+- Recently I learned to write [poems]({{ site.url }}/res/poems.html) to get some relax.
 
-<br>
 <br>

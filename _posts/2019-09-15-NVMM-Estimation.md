@@ -9,7 +9,7 @@ desc: I guess this paper, Belomestny and Panov (2018), is valuable since it prov
 
 <br>
 
-In this note I will summarize [Belomestny and Panov (2018)](https://arxiv.org/pdf/1705.07578.pdf). This paper provides a **non-parametric** way to estimate $\mu$ and $G$ of **normal variance-mean mixture** of the form: 
+In this note I will summarize [Belomestny and Panov (2018)](https://arxiv.org/pdf/1705.07578.pdf). This paper provides a **non-parametric** way to estimate $\mu$ and $G$ of **normal variance-mean mixture** of the form:
 
 
 $$
@@ -24,19 +24,19 @@ X\overset{d}{=}\mu s+\sqrt{s}\eta,\ \ \ \eta\sim N(0, 1) \tag{2}
 $$
 
 
-where $s$ is the normal variance distributed in $G$ and $\mu s$ is the normal mean. 
+where $s$ is the normal variance distributed in $G$ and $\mu s$ is the normal mean.
 
 <br>
 
-***Citation:*** 
+***Citation:***
 
-Denis Belomestny and Vladimir Panov. (2018) Semiparametric estimation in the normal variance-mean mixture model, arXiv preprint:  [1705.07578v1](https://arxiv.org/pdf/1705.07578.pdf). 
+Denis Belomestny and Vladimir Panov. (2018) Semiparametric estimation in the normal variance-mean mixture model, arXiv preprint:  [1705.07578v1](https://arxiv.org/pdf/1705.07578.pdf).
 
 <br>
 
-#### 1. Estimate $\mu$ 
+#### 1. Estimate $\mu$
 
-The equation (1) can be represented in 
+The equation (1) can be represented in
 
 
 $$
@@ -49,7 +49,7 @@ p(x;\mu,G)&=\int_{R_+}\frac{1}{\sqrt{2\pi s}}\exp\left(-\frac{x^2-2x\mu s+\mu^2s
 $$
 
 
-where 
+where
 
 
 $$
@@ -58,7 +58,7 @@ $$
 
 <br>
 
-**Def. [An Estimation as Comparison].** The equation (4) implies that 
+**Def. [An Estimation as Comparison].** The equation (4) implies that
 
 $$
 p(-x;\mu,G)=e^{-x\mu}I_{\mu,G}(-x^2/2) \tag{5}
@@ -66,7 +66,7 @@ $$
 
 
 
-thus, dividing (4) and (5), we get 
+thus, dividing (4) and (5), we get
 
 
 $$
@@ -93,14 +93,14 @@ Set $W(\rho):=E(e^{-\rho X}w(X))$, where $\rho\in R$ and $X$ is distributed in $
 
 **Assertion.** Then, $W(\rho)$ is monotone and $W(\mu)=0$. <br>
 
-***Proof.*** Plug into (4) and we have that 
+***Proof.*** Plug into (4) and we have that
 
 $$
 W(\rho)=E(e^{-\rho X}w(X))=\int_R e^{-\rho x}w(x)\cdot e^{x\mu}I_{\mu,G}(-x^2/2)dx
 $$
 
 
-thus we know $W(\rho)$ is monotone simply by differentiating with respect to $\rho$. Also, 
+thus we know $W(\rho)$ is monotone simply by differentiating with respect to $\rho$. Also,
 
 
 $$
@@ -112,14 +112,14 @@ Since $x(.)$ is odd function and $I_{\mu,G}$ is even function, the integral equa
 
 <br>
 
-**Def. [Estimation of $\mu$].** Without loss of generality we assume $\mu\in[0, M/2)$ for some $M>0$. Set 
+**Def. [Estimation of $\mu$].** Without loss of generality we assume $\mu\in[0, M/2)$ for some $M>0$. Set
 
 $$
 \mu_n:=\inf\{\rho>0: W_n(\rho)=0\} \land M \tag{8}
 $$
 
 
-with 
+with
 
 
 $$
@@ -128,7 +128,7 @@ $$
 
 where $x_i$ are drawn form $X\sim G$. <br>
 
-**Assertion.** We have that $\lim_{\rho\to-\infty}W_n(\rho)\le 0$ and $\lim_{\rho\to\infty}W_n(\rho)\ge0$, and 
+**Assertion.** We have that $\lim_{\rho\to-\infty}W_n(\rho)\le 0$ and $\lim_{\rho\to\infty}W_n(\rho)\ge0$, and
 
 
 $$
@@ -144,14 +144,14 @@ Based on the property 2 of $w(.)$, we can easily verify $W'_n(\rho)\ge0$, and th
 
 <br>
 
-**Theorem 2.1. [Convergence Speed].** Let $p\ge2$ and $M\ge0$ with 
+**Theorem 2.1. [Convergence Speed].** Let $p\ge2$ and $M\ge0$ with
 
 $$
 \Lambda(M, p):= ||(1+e^{-MX})Xw(X)||_p<\infty
 $$
 
 
-Then 
+Then
 
 
 $$
@@ -161,13 +161,13 @@ $$
 
 with a constant $K$ depending on $p$ and $\Lambda(M, p)$ only. <br>
 
-***Proof.*** See appendix 7.1 of the paper. 
+***Proof.*** See appendix 7.1 of the paper.
 
 <br>
 
-#### 2. Estimate $G$ 
+#### 2. Estimate $G$
 
-In this section, we want to estimate the density function $g$ of $G$, from observations $x_1, x_2, ...$ of random variable $X\sim p(x;\mu,G)$, supposing $\mu$ is known. Based on the [introduction](https://zhuanglinsheng.github.io/paper_notes/2019/09/14/Normal-Variance-Mean-Mixture-Properties.html) note, we know the characteristic function of $X=\mu s+\sqrt{s}\eta $ is 
+In this section, we want to estimate the density function $g$ of $G$, from observations $x_1, x_2, ...$ of random variable $X\sim p(x;\mu,G)$, supposing $\mu$ is known. Based on the [introduction](h{{ site.url }}/paper_notes/2019/09/14/Normal-Variance-Mean-Mixture-Properties.html) note, we know the characteristic function of $X=\mu s+\sqrt{s}\eta $ is
 
 
 $$
@@ -182,13 +182,13 @@ where  $\psi(u)=u^2/2-iu\mu$, and $L_s(x):=E(e^{-s x})=\int_Re^{-sx}g(s)ds$ is t
 
 <br>
 
-**Mellin Transformation of $L_s$.** More about Mellin transform and its inverse can be found in the extension part at the end of the note. Let 
+**Mellin Transformation of $L_s$.** More about Mellin transform and its inverse can be found in the extension part at the end of the note. Let
 
 $$
 \mathcal{M}[L_s](z):=\int_{R_+} L_s(u)u^{z-1}du.
 $$
 
-**Mellin transform of $g$.** We have the collection between $\mathcal{M}[L_s]$ and $\mathcal{M}[g]$, 
+**Mellin transform of $g$.** We have the collection between $\mathcal{M}[L_s]$ and $\mathcal{M}[g]$,
 
 $$
 \begin{aligned}
@@ -202,13 +202,13 @@ $$
 
 
 
-Thus we can estimate $\mathcal{M}[g]$ by 
+Thus we can estimate $\mathcal{M}[g]$ by
 $$
 \mathcal{M}[g](z):=\frac{\mathcal{M}[L_s](1-z)}{\Gamma(1-z)}\tag{11}
 $$
 
 
-and finally, we apply the inverse Mellin transform to estimate $g$ of r. v. $s$. 
+and finally, we apply the inverse Mellin transform to estimate $g$ of r. v. $s$.
 
 
 $$
@@ -220,7 +220,7 @@ $$
 
 <br>
 
-**Statistics: Estimate $\mathcal{M}[L_{s}]$.** Now we want to estimate the Mellin transform.  First, by (9) and Cauchy's integral theorem, we know 
+**Statistics: Estimate $\mathcal{M}[L_{s}]$.** Now we want to estimate the Mellin transform.  First, by (9) and Cauchy's integral theorem, we know
 
 $$
 \begin{aligned}
@@ -230,7 +230,7 @@ $$
 $$
 
 
-where $l$ is the curve on the complex plain, defined as the image of $\psi(u)$, that is, $l$ is the set of points $w\in\mathbb{C}$ satisfying $\mathrm{Im}(w)=-\mu\sqrt{2\mathrm{Re}(w)}$. So that the Melin transform can be estimated from the data via 
+where $l$ is the curve on the complex plain, defined as the image of $\psi(u)$, that is, $l$ is the set of points $w\in\mathbb{C}$ satisfying $\mathrm{Im}(w)=-\mu\sqrt{2\mathrm{Re}(w)}$. So that the Melin transform can be estimated from the data via
 
 $$
 \begin{aligned}
@@ -240,7 +240,7 @@ $$
 $$
 
 
-where 
+where
 
 
 $$
@@ -257,11 +257,11 @@ and $U_n$ is sequence of positive numbers tending to infinity as $n\to\infty$. <
 
 #### Relative notes
 
-[An inroduction to Normal variance-mean mixture](https://zhuanglinsheng.github.io/2019/09/14/NVMM-Properties.html) 
+[An inroduction to Normal variance-mean mixture](h{{ site.url }}/2019/09/14/NVMM-Properties.html)
 
 <br>
 
-#### Further reading 
+#### Further reading
 
 Estimation of $H(p)$:<br>
 
@@ -303,7 +303,7 @@ About EM Algorithm:<br>
 
 [11] [Denis Belomestny and Vladimir Panov. (2018)](https://arxiv.org/pdf/1705.07578.pdf)<br>
 
-[12] [My notes about the above paper.](https://zhuanglinsheng.github.io/paper_notes/2019/09/17/Normal-Variance-Mean-Mixture-Statistics-1.html)<br>
+[12] [My notes about the above paper.](h{{ site.url }}/paper_notes/2019/09/17/Normal-Variance-Mean-Mixture-Statistics-1.html)<br>
 
 [13] [R. G. Campos,  F. Mejia (2007): Quadrature formulas for the Laplace and Mellin transforms.](https://arxiv.org/pdf/0704.2842.pdf)<br>
 
