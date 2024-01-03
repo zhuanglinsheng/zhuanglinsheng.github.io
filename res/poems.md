@@ -3,7 +3,7 @@ layout: default
 title: Poems
 ---
 
-<img title="2020" alt="Alt text" src="res/cv/Me.jpg" style="width:200px;">
+<img title="2020" alt="Alt text" src="./cv/Me.jpg" style="width:200px;">
 
 2022年08月10日《[无题]({{ site.url }}/res/poems/2022-08-10.html)》
 
