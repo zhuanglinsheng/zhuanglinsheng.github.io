@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: null
 title: Poems
 ---
+
+# [{{ site.title }}]({{ site.url }})
 
 <img title="2020" alt="Alt text" src="./cv/Me.jpg" style="width:200px;">
 <br>
@@ -13,9 +15,9 @@ title: Poems
 
 2022年08月01日《[无题]({{ site.url }}/res/poems/2022-08-01.html)》
 
-2021年11月21日《[夜读红楼]({{ site.url }}/res/poems/2021-11-21.html)》
+2021年11月21日《[夜读红楼：黛玉]({{ site.url }}/res/poems/2021-11-21.html)》
 
-2021年11月02日《[夜读红楼]({{ site.url }}/res/poems/2021-11-02.html)》
+2021年11月02日《[夜读红楼：宝玉]({{ site.url }}/res/poems/2021-11-02.html)》
 
 2021年06月25日《[酷夏，所有快乐时光]({{ site.url }}/res/poems/2021-06-25.html)》
 

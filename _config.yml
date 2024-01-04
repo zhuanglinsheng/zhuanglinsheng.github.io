@@ -5,3 +5,11 @@ description:
   Here is my <a href="https://zhuanglinsheng.github.io/res/cv/cv2020.pdf">CV (2020)</a>.
 url: https://zhuanglinsheng.github.io
 baseurl: /zhuanglinsheng.github.io
+github_username: zhuanglinsheng
+
+plugins:
+  - jekyll-feed
+
+feed:
+  tags: true
+  posts_limit: 1000

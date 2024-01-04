@@ -1,12 +1,16 @@
 ---
-layout: home
+layout: null
 ---
+
+# [{{ site.title }}]({{ site.url }})
 
 <img title="2020" alt="Alt text" src="res/cv/Me.jpg" style="width:200px;">
 
 ## Biography
 
-I am currently a PhD student of National University of Singapore Institute of Operations Research and Analytics (IORA). I graduated from Peking University School of Economics in 2017 and got a Master's degree from Peking University HSBC Business School in 2020.
+I am currently a PhD student of National University of Singapore Institute of Operations Research and Analytics (IORA).
+
+I graduated from Peking University School of Economics in 2017 and got a Master's degree from Peking University HSBC Business School in 2020.
 
 ## Research Interests
 
