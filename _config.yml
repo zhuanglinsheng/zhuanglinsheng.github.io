@@ -1,8 +1,6 @@
 title: Zhuang Linsheng
 show_downloads: false
-description:
-  Welcome to Linsheng's personal site.
-  Here is my <a href="https://zhuanglinsheng.github.io/res/cv/cv2020.pdf">CV (2020)</a>.
+description: Homepage
 url: https://zhuanglinsheng.github.io
 baseurl: /zhuanglinsheng.github.io
 github_username: zhuanglinsheng

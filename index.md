@@ -6,6 +6,8 @@ layout: null
 
 <img title="2020" alt="Alt text" src="res/cv/Me.jpg" style="width:200px;">
 
+Welcome to Linsheng's personal site. Here is my [CV (2020)](/res/cv/cv2020.pdf)
+
 ## Biography
 
 I am currently a PhD student of National University of Singapore Institute of Operations Research and Analytics (IORA).
