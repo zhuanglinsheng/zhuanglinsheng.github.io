@@ -100,12 +100,13 @@ ps -aux | grep "ngrok"
 cat ~/.nohup_history | grep "url"
 ## General ssh Connection
 ssh USER@0.tcp.ap.ngrok.io -p xxxxx
-## Jupyter
+
+## App: Jupyter
 ssh -N -L localhost:8080:localhost:8888 USER@0.tcp.ap.ngrok.io -p xxxxx
 ## In browser: localhost: 8888. Type in the default jupyter password. 
-## Rstudio-server
-ssh -N -L localhost:8181:localhost:8787 bob@0.tcp.ap.ngrok.io -p xxxxx
-## In browser: localhost: 8181. Login as bob. 
+## App: Rstudio-server
+ssh -N -L localhost:8181:localhost:8787 USER@0.tcp.ap.ngrok.io -p xxxxx
+## In browser: localhost: 8181. Login as USER. 
 ```
 
 Is there any `pip` tricks?
