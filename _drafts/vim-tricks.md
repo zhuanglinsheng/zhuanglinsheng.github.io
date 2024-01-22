@@ -1,22 +1,3 @@
-## Useful Linux Operations
-
-Move file in batch
-
-```shell
-mkdir folder
-mv * folder
-```
-
-Remove suffix in batch
-
-```shell
-for file in suffix_*; do 
-	mv $file ${file$suffix_} 
-done
-```
-
-<br>
-
 ## Must Known `Vim` Tricks
 
 ### (1) Settings
@@ -76,7 +57,7 @@ set list lcs=tab:\ \
   - Line level `0`, `$`, `f<char>`, `T<char>` 
   - Line level further: Forward to a char within line `f<char>` 
   - Line level further: Backward to a char within line `T<char>` 
-  - Line level further: Move to line n `<n>|`
+  - Line level further: Move to column n `<n>|` 
 
 - Jump: 
   - Paragraph level `}`, `{` 
@@ -90,5 +71,4 @@ set list lcs=tab:\ \
   - Line level `:s/foo/bar/gc` 
   - File level `:%s/foo/bar/gc` 
   - File level `:%s/foo/bar/gc` 
-
 
