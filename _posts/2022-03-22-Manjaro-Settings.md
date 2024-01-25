@@ -30,7 +30,7 @@ touch ~/.pam_environment
 echo 'GTK_IM_MODULE=fcitx5
 QT_IM_MODULE=fcitx5
 XMODIFIERS=@im=fcitx5' >> ~/.pam_environment
-echo fcitx5 configuration Finished
+# echo fcitx5 configuration Finished
 ```
 
 Is there any `pacman` tricks?
@@ -44,8 +44,7 @@ sudo pacman -Scc
 How to let software run as backstage process? Signal as an example
 
 ```
-sudo pacman -S signal-desktop  ## 
-
+# sudo pacman -S signal-desktop
 if [ -f "~/.signal_history" ]; then
      rm ~/.signal_history
 fi
@@ -94,23 +93,24 @@ How to make your computer a server? Using `ngrok`
 ## Install Ngrok from AUR:
 yay install ngrok
 ## Verification (login https://ngrok.com/ and find token):
-ngrok authtoken 1msZ5i9WIlm8yBDIEVXY07IPeJ5_3XTV6UpTLaMTsBL5pY2fH
+ngrok authtoken TOKEN 
 ## Ngrok proxy (Usages)
 if [ -f "~/.nohup_history" ]; then
     rm ~/.nohup_history
 fi
 nohup ngrok tcp 22 --region ap -log=stdout > ~/.nohup_history 2>&1 &
 ps -aux | grep "ngrok"
-## Find the ngrok port in '.nohup_history' file (and it shows to be xxxxx = 15432 )
+## Find the ngrok port in '.nohup_history' file (and it shows to be xxxxx = a number)
 cat ~/.nohup_history | grep "url"
 ## General ssh Connection
-ssh bob@0.tcp.ap.ngrok.io -p xxxxx
-## Jupyter
-ssh -N -L localhost:8080:localhost:8888 bob@0.tcp.ap.ngrok.io -p xxxxx
+ssh USER@0.tcp.ap.ngrok.io -p xxxxx
+
+## App: Jupyter
+ssh -N -L localhost:8080:localhost:8888 USER@0.tcp.ap.ngrok.io -p xxxxx
 ## In browser: localhost: 8888. Type in the default jupyter password. 
-## Rstudio-server
-ssh -N -L localhost:8181:localhost:8787 bob@0.tcp.ap.ngrok.io -p xxxxx
-## In browser: localhost: 8181. Login as bob. 
+## App: Rstudio-server
+ssh -N -L localhost:8181:localhost:8787 USER@0.tcp.ap.ngrok.io -p xxxxx
+## In browser: localhost: 8181. Login as USER. 
 ```
 
 Is there any `pip` tricks?
@@ -134,7 +134,7 @@ How can I use jupyter remotely?
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user --skip-running-check
 # Basic jupyter environment settings
-## Set password (default 958642zls), the same as user password:
+## Set password, the same as user password:
 jupyter notebook password
 # Start Jupyter Service
 if [ -f "~/.jupyter_history" ]; then
