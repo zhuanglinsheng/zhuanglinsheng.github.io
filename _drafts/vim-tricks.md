@@ -53,22 +53,23 @@ set list lcs=tab:\ \
 
 - Move: 
   - Char level `h`, `j`, `k`, `l` 
-  - Word level `w`, `b`, `e`, `ge` 
+  - Word level `W`, `w`, `B`, `b`, `E`, `e`, `ge` 
   - Line level `0`, `$`, `f<char>`, `T<char>` 
   - Line level further: Forward to a char within line `f<char>` 
   - Line level further: Backward to a char within line `T<char>` 
   - Line level further: Move to column n `<n>|` 
 
 - Jump: 
-  - Paragraph level `}`, `{` 
+  - Sentence level `)`, `(`
   - Block level `]] `, `[[`, `]m`, `[m` 
+  - Paragraph level `}`, `{` 
+  - Screen level `H`, `M`, `L` 
   - Screen level `Ctrl-U`, `Ctrl-D` 
-  - File level `:<line num>`, `gg`, `G` 
+  - File level `:<line num>`, `<line num>G` `gg`, `G` 
   - Search `/pattern`, `?pattern` 
   - Furward and backward `Ctrl-o`, `Ctrl-i` 
 
 - Replacement:
   - Line level `:s/foo/bar/gc` 
-  - File level `:%s/foo/bar/gc` 
   - File level `:%s/foo/bar/gc` 
 

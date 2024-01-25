@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Basic Linux Operations, a Memorandum (Manjaro for Example)"
+title: "Basic Linux Settings"
 use_math: false
 lang: en
 tags: notes
@@ -9,7 +9,11 @@ desc: This is a record of the basic settings after installing Manjaro, a Linux d
 
 <br><br>
 
-Afrer installation, how to select the mirrors by country and update the system?
+This is a record of the basis settings after installing Manjaro, a linux distribution.
+Most of the operations should be consistent with other distros, with a minore 
+difference in package management (Manjaro uses pacman).
+
+Afrer installation, how to select the mirrors by country and update your system?
 
 ```
 sudo pacman-mirrors --country Singapore
@@ -17,7 +21,7 @@ sudo pacman -Syyu
 sudo pacman -S base-devel # Install basic developing tools
 ```
 
-How to enable Chinese input?
+How to config for Chinese input?
 
 ```
 sudo pacman -S fcitx5-chinese-addons fcitx5-gtk fcitx5-qt
