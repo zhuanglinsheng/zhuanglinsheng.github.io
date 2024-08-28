@@ -1,4 +1,4 @@
-# Default Operators
+# 1.2. Operators
 
 <br>
 

@@ -1,4 +1,4 @@
-# Expressions
+# 1.3. Expressions
 
 This section will illustrate the priority of different expressions in Tapas.
 

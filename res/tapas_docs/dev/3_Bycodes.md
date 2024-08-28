@@ -1,72 +1,4 @@
-# How does Tapas Script Work?
-
-Tapas source code can be divided into four parts: compilation, runtime, virtual machine and C++ interaction APIs.
-
-Roughly speaking, Tapas uses a single traversal to generate virtual machine instructions, and then uses a stack-type virtual machine to load, interprets and executes those instructions.
-
-In addition, Tapas maintains an environment system at runtime to manage variables. Also, Tapas keeps a constant-value table that is generated in compilation for constants (integers, floating-point numbers, and strings) indexing.
-
-<br>
-
-## Introduction
-
-Similar to Lua, Tapas uses a recursive descent algorithm to traverse the source code in order to generate bycode. Please refer to the ``tsyner`` class for compilation algorithms.
-
-In compilation, a register counter (in class ``treg_ctr``) and a list of variable names (in class ``tobj_ctr``) are maintained. Based on the two recorders, we determine the location of each variable in the corresponding environment.
-
-After compilation, all variable names will be replaced with its relative location in the environment tree. Tapas will not store the names of any variable names in the runtime.
-
-In the execution period, the Tapas virtual machine reads bycodes from binary files with suffix ``.tapc``, and loads the constant table and instruction lists from the binary file. Then, virtual machine interprets the instructions in order.
-
-After execution, expressions would leave a returned value on the top of the virtual machine stack, while statements clear the stack.
-
-Here is an example:
-
-```tapas
-var a : int
-a = 1 + 2
-```
-
-The first line is a variable declaration statement.
-
-The virtual machine claims a memory space in the root environment (library) to store the value of this variable. After the execution of this statement, there is no value left in the virtual machine stack.
-
-The second line is an assignment statement, which contains an addition expression.
-
-For the right hand side of the assignment statement, the virtual machine first pushes values ``1`` and ``2`` from integer constant table into the top of virtual machine (VM) stack, and adds them, and clear the top two elements of VM stack, then stores the returned value of addition operation ``1+2`` on the top of VM stack. After the execution of this addition expression, there is a returned value ``3`` left at the top of VM stack.
-
-Then, program will execute the assignment statement. Pick the value from the top of VM stack and move it into the memory address of the variable ``a``, and then clear the value at the top of VM stack. After assignment statement, no value is left in VM stack.
-
-<br>
-
-## Garbage collection
-
-Tapas uses reference counting for garbage collection of reference type values.
-
-The reference counting algorithm is implemented in the class ``tcompo_v``: each reference type maintains a 16-bit short integer unsigned number to record the number of references to the value.
-
-There are four places in Tapas that can be used to store values,
-
-- **Case 1.** variable list in the environment
-- **Case 2.** values of collection types
-- **Case 3.** runtime stack of virtual machine
-- **Case 4.** returned value register of virtual machine ``tvm::__ret``
-
-Generally speaking, wherever a reference type is placed in any of the above 4 positions, the reference count of this value needs to be increased by 1. (In practice, only the first two positions are tracked, and the latter two are ignored, since the virtual machine is only regarded as a computing process, not a warehouse for data storage.)
-
-The reference counting rules are very simple:
-
-- **Case 1.** When a reference type value is just created in memory, its reference count is zero.
-- **Case 2.** When a reference type value is just created in memory, it must be put in one of the above four places.
-- **Case 3.** When a reference type value is referred by a variable name, the reference count is increased by one. Correspondingly, if it is discarded by a variable name, the reference count is reduced by one.
-- **Case 4.** When a reference type value is enclosed by a collection (such as ``tpair``, ``tlist`` or ``tdict``), the references count is increased by one. Correspondingly, if discarded by the collection, the reference count is reduced by one.
-- **Case 5.** The returned value of the returned value register in virtual machine is always pushed on the top the stack after the return command ends.
-- **Case 6.** Whenever a period of virtual machine running process (that is, a statement) ends, the running stack is always been cleared (reference values' reference count are deducted by one). The reference type value is released when its reference count reaches 0.
-- **Case 7.** Reference type values will be checked whenever its reference count decreases. When its reference count is reduced to 0, the value is released.
-
-<br>
-
-## Description of bycodes
+# 3. Bycodes
 
 The so-called Tapas bycode instructions are abstract instructions, not real CPU instructions.
 
@@ -90,6 +22,7 @@ According to different bit layouts, instructions are divided into four types. Pl
 </div>
 <p></p>
 </embed>
+
 
 - ``OP_PASS`` Do nothing;
 - ``OP_THIS`` Push the value representing the current environment to the top of the stack;
@@ -115,6 +48,7 @@ According to different bit layouts, instructions are divided into four types. Pl
 </div>
 <p></p>
 </embed>
+
 
 - ``OP_TMPDEL oloc`` Delete the temporary variable located at ``oloc`` from the current virtual machine;
 - ``OP_JPF ncmd`` Jump forward by ``n`` steps;
@@ -149,6 +83,7 @@ According to different bit layouts, instructions are divided into four types. Pl
 <p></p>
 </embed>
 
+
 - ``OP_POPN nreg, interactive`` Pop the n data at the top of the stack;
 - ``OP_POPCOV oloc, isenv`` Pop the data on stack top and assign it to the variable located in ``oloc``;
 - ``OP_LOOPAS oloc, isenv`` When this instruction is executed, the stack top must be an ``iterable`` value. This instruction will update the iteration, assign the pointed value of the stack top in the current iteration to the variable located in ``oloc``, and push a boolean value to the top of the stack to indicate whether the iteration is over;
@@ -172,18 +107,19 @@ According to different bit layouts, instructions are divided into four types. Pl
 <p></p>
 </embed>
 
+
 - ``OP_VCRT cloc, isenv`` Create a new variable at `cloc` in environment or stack;
 
 - ``OP_PUSHF ncmds nparams`` Create a ``tfunc`` of ``nparams`` parameters by the next ``ncmd`` instructions in the current instruction list and, and push it to stack top;
 
 - ``OP_ADD L R``   Before `OP_ADD`, there must be an `OP_PUSHINFO` to push an indicator ``i = 0, 1, 2, 3`` standing for
 
-  - 0 - Both sides are literal;
-  - 1 - Left hand side is variable, right hand side is literal;
-  - 2 - Left hand side is literal, right hand side is variable;
-  - 3 - Both sides are variable;
+    - 0 - Both sides are literal;
+    - 1 - Left hand side is variable, right hand side is literal;
+    - 2 - Left hand side is literal, right hand side is variable;
+    - 3 - Both sides are variable;
 
-  Then, in `OP_ADD`, the elements ``L`` and ``R`` stand for the locations of values of left hand side and right hand side in constant table (if either is literal) or variable list (if either is vairable).
+    Then, in `OP_ADD`, the elements ``L`` and ``R`` stand for the locations of values of left hand side and right hand side in constant table (if either is literal) or variable list (if either is vairable).
 
 - ``OP_IDXL oloc, nparams`` Call the variable at ``oloc`` (must be of indexable type), use the ``nparams`` value of stack top as index, indexing and find the corresponding location, assign it by the data at the top ``nparams+1`` of stack, and pop ``nparams+1`` data on the top of the stack; Before `OP_IDXL`, there must be an `OP_PUSHINFO` to push a boolean indicator `isenv`.
 
@@ -199,10 +135,12 @@ for (let i in 0 to 10) {
 	}
 }
 ```
+
 <pre class='Tapas-Return'>
 3
 9
 </pre>
+
 
 This program prints out all odd numbers that are multiples of 3 among 0 and 9.
 
@@ -263,6 +201,7 @@ Const Value List (Integers): 10, 0, 3, 2
 Const Value List (Double Floats):
 Const Value List (Character Strings): print
 </pre>
+
 
 Referring to the explanations of each instruction above, we can read the bycode and understand the execution flow of Tapas script.
 
