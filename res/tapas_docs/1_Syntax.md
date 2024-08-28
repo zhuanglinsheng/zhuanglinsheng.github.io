@@ -1,3 +1,9 @@
+---
+layout: post
+---
+
+
+
 # 1. Syntax
 
 [1.1. Value Types](./syntax/1_Value_Types.md). 

@@ -1,3 +1,9 @@
+---
+layout: post
+---
+
+
+
 # 2. Developer Documentation
 
 [2.1. Mechanism](./dev/1_Mechanism.md). 
