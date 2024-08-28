@@ -1,4 +1,4 @@
-# To Sort List
+# 3.1. Sort
 
 The first notice is about passing parameters of functions. If you pass an object of composite type into function, then any changes on this parameter would also affect the outer object. This is because parameters passing follows the shallow copy rule with only the reference counter of the object increases by one and its entity (in a heap block) not copied. List sorting is a good example to illustrate this notice.
 
@@ -18,7 +18,7 @@ arr
 </pre>
 <br>
 
-## Bubble sorting
+## 3.1.1. Bubble sorting
 
 The bubble sorting algorithm is implemented below:
 
@@ -48,7 +48,7 @@ arr_copy                                          // display the copied list aft
 </pre>
 <br>
 
-## Quick sorting
+## 3.1.2. Quick sorting
 
 ```tapas
 let quick_sort: fn = (arr) {
@@ -89,7 +89,7 @@ arr_copy                         // display the copied list after sorting
 </pre>
 <br>
 
-## Performance Comparison
+## 3.1.3. Performance Comparison
 
 ```tapas
 arr_copy = arr.std::copy()

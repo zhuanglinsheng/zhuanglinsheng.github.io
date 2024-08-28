@@ -1,4 +1,4 @@
-# String
+# 1.6.2. String
 
 String is inherited from C++ STL string class ``std::string``. It can be obtained by single quote '...' or double quote "...". String could be multi-lines until where the quote is closed.
 

@@ -1,4 +1,4 @@
-# 3. Bycodes
+# 2.3. Bycodes
 
 The so-called Tapas bycode instructions are abstract instructions, not real CPU instructions.
 
@@ -8,9 +8,11 @@ The length of a bycodes is 32 bits, where the first 6 bits are the instruction n
 
 According to different bit layouts, instructions are divided into four types. Please refer to ``tbycode`` class for the implementation.
 
-----
+<br>
 
-### no params
+## 2.3.1. No Params
+
+
 
 <embed>
 <p></p>
@@ -34,9 +36,11 @@ According to different bit layouts, instructions are divided into four types. Pl
 - ``OP_PAIR`` Pop the top two of stack as parameters, call ``tops::operator_pair``, and push the returned value to stack top;
 - ``OP_TO`` Pop the top two of stack as parameters, call ``tops::operator_to``, and push the returned value to stack top;
 
-----
+<br>
 
-### U (1 parameter)
+## 2.3.2. U (1 parameter)
+
+
 
 <embed>
 <p></p>
@@ -65,9 +69,11 @@ According to different bit layouts, instructions are divided into four types. Pl
 - ``OP_IDXR n`` Take the first ``n`` value at stack top as the index, the ``n+1`` value as the indexable value, and pop the first ``n+1`` values, and push the indexing return to stack top;
 - ``OP_EVAL n`` Take the first ``n`` value at stack top as parameters, the ``n+1`` value as the callable value, and pop the first ``n+1`` values, and push the calling return to stack top;
 
-----
+<br>
 
-### LR (2 parameters)
+## 2.3.3. LR (2 parameters)
+
+
 
 <embed>
 <p></p>
@@ -89,9 +95,11 @@ According to different bit layouts, instructions are divided into four types. Pl
 - ``OP_LOOPAS oloc, isenv`` When this instruction is executed, the stack top must be an ``iterable`` value. This instruction will update the iteration, assign the pointed value of the stack top in the current iteration to the variable located in ``oloc``, and push a boolean value to the top of the stack to indicate whether the iteration is over;
 - ``OP_PUSHX oloc, isenv`` Push the variables in ``oloc``;
 
----
+<br>
 
-### CP (2 parameters)
+## 2.3.4. CP (2 parameters)
+
+
 
 <embed>
 <p></p>
@@ -126,7 +134,9 @@ According to different bit layouts, instructions are divided into four types. Pl
 
 <br>
 
-Example. We try to check the bycodes of this file ``test_bycodes.tap``:
+## 2.3.5. Example
+
+We try to check the bycodes of this file ``test_bycodes.tap``:
 
 ```tapas
 for (let i in 0 to 10) {
@@ -140,8 +150,6 @@ for (let i in 0 to 10) {
 3
 9
 </pre>
-
-
 This program prints out all odd numbers that are multiples of 3 among 0 and 9.
 
 
@@ -201,7 +209,5 @@ Const Value List (Integers): 10, 0, 3, 2
 Const Value List (Double Floats):
 Const Value List (Character Strings): print
 </pre>
-
-
 Referring to the explanations of each instruction above, we can read the bycode and understand the execution flow of Tapas script.
 

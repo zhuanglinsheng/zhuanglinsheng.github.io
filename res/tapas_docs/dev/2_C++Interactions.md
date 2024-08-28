@@ -1,8 +1,8 @@
-# 2. C++ Interaction
+# 2.2. C++ Interaction
 
 <br>
 
-## 2.1. Calling Tapas in C++
+## 2.2.1. Calling Tapas in C++
 
 The APIs of calling Tapas in C++ are defined in the class ``tapas::tsession`` in ``tap.h`` file, which provides a set of methods. The most important two are:
 
@@ -49,7 +49,7 @@ int main(int argc, char ** args)
 
 <br><br>
 
-## 2.2. Extend Tapas with C++ (1)
+## 2.2.2. Extend Tapas with C++ (1)
 
 You can expand the default functions of Tapas script by adding C++ functions into it. In order to do this, you need to
 
@@ -129,6 +129,6 @@ And we should get the return ``15``.
 <br><br>
 
 
-## 2.3. Extend Tapas with C++ (2)
+## 2.2.3. Extend Tapas with C++ (2)
 
 In order to extend the data structures in Tapas script, we need to make C++ class to inherit ``tapas::tcompo_v``, which is a virtual class asking for the implementations of methods ``copy`` and ``print``. If further attributes are needed (callable, indexable, iterable, etc.), then we can inherit ``tcompo_eval``, ``tcompo_idx`` and ``tcompo_iter``, and implement their methods. After creating the class that we need, we also need to create a ``cppfunc`` so that we can use this data structure in Tapas script (see above).

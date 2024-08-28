@@ -1,4 +1,4 @@
-# Dictionary
+# 1.6.5. Dictionary
 
 Dictionary is inherited from C++ STL class ``std::unsorted_map``. It contains ``key-value`` pairs. The ``key`` in dictionary should be string.
 

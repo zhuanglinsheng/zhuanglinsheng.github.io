@@ -1,4 +1,4 @@
-# List
+# 1.6.3. List
 
 List is inherited from C++ STL vector class ``std::vector``. It can be created by the Tapas function ``tolist(...)`` or simply by brackets ``[...]``.  It can contain elements of different types.
 

@@ -1,4 +1,6 @@
-# 1. Mechanism
+# 2.1. Mechanism
+
+## 2.1.1. Overview
 
 Tapas source code can be divided into four parts: compilation, runtime, virtual machine and C++ interaction APIs.
 
@@ -35,7 +37,7 @@ Then, program will execute the assignment statement. Pick the value from the top
 
 <br>
 
-## Garbage collection
+## 2.1.2. Garbage collection
 
 Tapas uses reference counting for garbage collection of reference type values.
 

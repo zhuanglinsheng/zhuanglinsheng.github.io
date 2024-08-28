@@ -1,8 +1,3 @@
----
-layout: display
----
-
-
 
 # 1. Syntax
 

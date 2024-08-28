@@ -1,4 +1,4 @@
-# Library
+# 1.6.8. Library
 
 Library is the module type in Tapas. It is created by ``import`` statement.
 

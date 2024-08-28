@@ -17,7 +17,7 @@ These codes would print out ``true``. When the propriety is not clear, always us
 
 <br>
 
-## Value
+## 1.3.1. Value
 
 The expressions with the highest priority are
 
@@ -34,7 +34,7 @@ These expressions directly create or refer to the values in Tap. They are the ba
 
 <br>
 
-## Calling and indexing
+## 1.3.2. Calling and indexing
 
 Expressions of the second priority are calling and indexing.
 
@@ -86,7 +86,7 @@ d::f1()
 </pre>
 <br>
 
-## Arithmetic operations
+## 1.3.3. Arithmetic operations
 
 Expressions of the third priority are arithmetic operations. They can be divided into three orders.
 
@@ -98,31 +98,31 @@ Higher order arithmetic operations are executed first inside an arithmetic opera
 
 <br>
 
-## Third order logic operations
+## 1.3.4. Third order logic operations
 
 Expression of the 4th priority is third order logical expression. The logical operators in this level include ``>``, ``<``, ``>=``, ``<=``, ``==``, ``!=``. Note that floats cannot be applied into ``==`` for equality judgment.
 
 <br>
 
-## Second order logic operations
+## 1.3.5. Second order logic operations
 
 Expression of the 5th priority is second order logical expression. The logical operators in this level include ``and`` and ``or``, the logical and operation and logical or operation. A ``nil`` would be returned if either side is not logical expression (boolean value or the expression that returns boolean value).
 
 <br>
 
-## Expression to
+## 1.3.6. Expression to
 
 Expression of the 6th priority is ``to`` expression, which looks like ``v1 to v2``. Here ``to`` is an operator and ``v1`` and ``v2`` are integers.
 
 <br>
 
-## Expression pair
+## 1.3.7. Expression pair
 
 Expression of the 7th priority is ``pair`` expression, which looks like ``v1 : v2``. Here `:` is an operator and ``v1`` and ``v2`` are Tapas values.
 
 <br>
 
-## Expression in
+## 1.3.8. Expression in
 
 The expression at the lowest position of the priority system is ``in`` expression: ``v1 in v2`` where ``in`` is logically existence operator. ``v1`` is an element and ``v2`` is an iterable value. (sub class of ``tcompo_iter``), including ``titer`` and ``tlist``. Operator ``in`` returns a boolean, standing for whether ``v1`` is in ``v2``.
 

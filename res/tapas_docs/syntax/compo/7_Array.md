@@ -1,11 +1,11 @@
-# Array
+# 1.6.7. Array
 
 We use C++ ``eigen`` package for the implementation of 2 dimensional array. (n dimensional tensors are
 not supported in yet). Tap support boolean array and double array.
 
 <br>
 
-## Creation
+## 1.6.7.1. Creation
 
 Array can be created by the function ``eig::toarr(rows, cols, value)``. For example, you can set all elements of your array to be the same value:
 
@@ -69,7 +69,7 @@ All elements of the random matrix follows uniform distribution in $[0, 1]$.
 
 <br>
 
-## Indexing
+## 1.6.7.2. Indexing
 
 Array is indexable. You can get the elements an by indexing. Array supports value indexing and slice indexing.
 
@@ -102,7 +102,7 @@ seqs
 </pre>
 <br>
 
-## Transpose and Pick Sub Array
+## 1.6.7.3. Transpose and Pick Sub Array
 
 Next, we will show the basic array transposing and sub array picking methods. Matrix transformation:
 
@@ -193,7 +193,7 @@ rad.eig::bottomright(2, 2)
 </pre>
 <br>
 
-## Operators for double array
+## 1.6.7.4. Operators for double array
 
 In this section we will show the supported operators for double array. We first create two random matrix
 
@@ -334,7 +334,7 @@ rad1 <= rad2
 </pre>
 <br>
 
-## Operators for boolean array
+## 1.6.7.5. Operators for boolean array
 
 Operator and
 

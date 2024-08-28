@@ -1,16 +1,10 @@
----
-layout: display
----
-
-
-
 # 1.1. Value Types
 
 Generally, there are two types in Tap, ``value type`` and ``composite type``. Consistent with other popular programming languages with virtual machines (such as Java or Python), object of value types contains specific values.
 
 <br>
 
-## Nil
+## 1.1.1. Nil
 
 A value of nil means null, empty or nothing. Nil cannot be explicitly created by users.
 
@@ -26,7 +20,7 @@ whose type code is:
 
 <br>
 
-## Boolean
+## 1.1.2. Boolean
 
 A boolean value could be either `true` or `false`. They can be obtained by literal ``true`` and ``false`` 
 
@@ -62,7 +56,7 @@ false == false      true
 <br>
 
 
-## Integer
+## 1.1.3. Integer
 
 An integer value in Tapas is in essence a `long int` in C++. They can be obtained by the literal of integer numbers
 
@@ -112,9 +106,9 @@ false == 0    true
 <br>
 
 
-## Double float
+## 1.1.4. Float
 
-A double float value in Tapas is in essence a `double float` in C++. They can be obtained by literal of double float numbers or by numerical operations.
+A float value in Tapas is in essence a `double float` in C++. They can be obtained by literal of double float numbers or by numerical operations.
 
 ```tapas
 std::print('2 / 3.0 = ', 2 / 3.0)

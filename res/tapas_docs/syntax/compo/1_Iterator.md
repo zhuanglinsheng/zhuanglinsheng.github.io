@@ -1,4 +1,4 @@
-# Iterator
+# 1.6.1. Iterator
 
 Iterator can be created by operator ``to`` or by function ``toiter``.
 

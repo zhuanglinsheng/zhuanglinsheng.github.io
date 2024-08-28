@@ -1,8 +1,6 @@
 # 1.2. Operators
 
-<br>
-
-## Arithmetic Operator
+## 1.2.1. Arithmetic Operator
 
 Including ``+``,  ``-``,  ``*``,  ``/``,  ``%``,  ``^``.
 
@@ -15,7 +13,7 @@ Including ``+``,  ``-``,  ``*``,  ``/``,  ``%``,  ``^``.
 
 <br>
 
-## Logical Operators (1st level)
+## 1.2.2. Logical Operators (1st level)
 
 Including ``>``, ``<``, ``>=``,  ``<=``,  ``==``,  ``!=``.
 
@@ -28,7 +26,7 @@ true
 
 <br>
 
-## Logical Operators (2nd level)
+## 1.2.3. Logical Operators (2nd level)
 
 Including ``and``, ``or``, ``in``.
 
@@ -40,7 +38,7 @@ true
 </pre>
 <br>
 
-## Operator `to`
+## 1.2.4. Operator `to`
 
 ```tapas
 0 to 5
@@ -62,7 +60,7 @@ for (let idx: int in 0 to 5) {
 </pre>
 <br>
 
-## Logical Operators (3nd level)
+## 1.2.5. Logical Operators (3nd level)
 
 Operator `in`.
 
@@ -74,7 +72,7 @@ true
 </pre>
 <br>
 
-## Operator colon ``:``
+## 1.2.6. Operator colon ``:``
 
 ```tapas
 {

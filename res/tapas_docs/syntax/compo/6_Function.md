@@ -1,4 +1,4 @@
-# Function
+# 1.6.6. Function
 
 Function is defined by the combination of parentheses and curly braces ``() {}``. Parameters are listed in
 parentheses ``()``. Commands are placed between curly braces ``{}``.

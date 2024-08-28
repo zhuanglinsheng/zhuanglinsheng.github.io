@@ -1,8 +1,6 @@
-# 1.4. Statements
+# 1.4. Statements 
 
-<br>
-
-## Environmental variable declaration
+## 1.4.1. Environmental variable declaration
 
 To declare an environmental variable, we use `var` statement. 
 
@@ -34,7 +32,7 @@ Note that:
 
 <br>
 
-## Temporary variable declaration
+## 1.4.2. Temporary variable declaration
 
 To declare a temporary variable we use `let` statement
 
@@ -59,7 +57,7 @@ Note that:
 
 <br>
 
-## Assignment
+## 1.4.3. Assignment
 
 The left hand side of ``=``  is the variable name (lvalue), and the right hand side of ``=`` is the respective rvalue to be assigned to the lvalue. Right value CANNOT be ``nil``. Before assignment, variables must be declared.
 
@@ -77,7 +75,7 @@ The code gives us error since the return of `print` function is `nil`.
 
 <br>
 
-## Branching statement
+## 1.4.4. Branching statement
 
 ```tapas
 let condition_1: bool = true
@@ -98,7 +96,7 @@ Here ``condition_1`` and ``condition_2`` are logical expression or boolean value
 
 <br>
 
-## Loop statement: for
+## 1.4.5. Loop statement: for
 
 The ``for`` loop statement looks like
 
@@ -118,7 +116,7 @@ Their meanings are similar to other general programming languages. It should be 
 
 <br>
 
-## Loop statement: while
+## 1.4.6. Loop statement: while
 
 The ``while`` loop statement looks like
 
@@ -134,19 +132,19 @@ while (condition_3) {
 
 <br>
 
-## break and continue
+## 1.4.7. break and continue
 
 Tapas supports ``break`` and ``continue`` to control the looping process. ``break`` means to jump out of loop while ``continue`` means to jump to the next loop.
 
 <br>
 
-## Return
+## 1.4.8. Return
 
 The return value statement can be parameterized like ``return value`` or of no parameter like ``return``. In return value statement, Tapas would clear all values on the virtual machine stack, copy ``value`` from environment to ``tapas::tvm::__rev``, and jump out of the current environment.
 
 <br>
 
-## Module import
+## 1.4.9. Module import
 
 The import statement looks like `import file.tap [as library]`. 
 

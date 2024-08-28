@@ -1,8 +1,6 @@
 # 1.5. Environment
 
-<br>
-
-## Environment tree
+## 1.5.1. Environment tree
 
 Environment is a key concept in Tapas. Concepts like function scope, closure, recursion, and modules are all related to the environment.
 
@@ -14,7 +12,7 @@ Environment maintains a variable list for storage and reference. All variables d
 
 <br>
 
-## Environment Scope
+## 1.5.2. Environment Scope
 
 In Tapas, commands in child environments can directly read and modify variables declared in father environment, while commands in the father environment can not directly affects those variables declared in child environments. If we want to modify some variables of child environment in father environment, we have to ``return`` them.
 
@@ -22,7 +20,7 @@ Note that, the statements like ``if``, ``while`` and ``for`` don't have environm
 
 <br>
 
-## Executable environment
+## 1.5.3. Executable environment
 
 For executable environment values (such as functions, etc.), a new virtual machine will be temporarily created each time it is executed. The commands in the sub-environment will be executed on this temporary virtual machine. The temporary virtual machine is only responsible for the operation of the sub-environment program instructions. Once execution ends, the returned value of the child environment program will be pushed onto the top of the stack of the virtual machine running in the parent environment program, and the temporary virtual machine will be destroyed.
 
@@ -30,7 +28,7 @@ For functions, after each function calling occurs, the values of local variables
 
 <br>
 
-## Higher-order functions
+## 1.5.4. Higher-order functions
 
 Since function is also a value in Tap, the function itself can return a function. Functions that return functions are called higher-order functions. When Tapas tries to search a variable while the returned function is executed, that variable is indexed according to the environment tree, which is called the "closure". Here is an example of a higher-order function:
 
@@ -62,7 +60,7 @@ Note that ``f2`` and ``f3``, as the returned value of ``f1``, are not identical,
 
 <br>
 
-## Function calling and recursion
+## 1.5.5. Function calling and recursion
 
 Tapas has two kind of functions, ``tfunc`` (defined by Tapas script) and ``cppfunc`` (defined by C++). They are all sub classes of ``tcompo_eval``. ``tfunc`` is also the child class of ``tcompo_env``, meaning that it is an environment.
 
@@ -90,7 +88,7 @@ Since ``this`` is a copy of the current environment, it has an empty variable li
 
 <br>
 
-## Further explanations about recursion
+## 1.5.6. Further explanations about recursion
 
 We mentioned at the end of Section 5 that local reference variables cannot be returned in recursion. Here is another example:
 
@@ -151,7 +149,7 @@ var expand_list_2: fn = (x) {
 <br>
 
 
-## tlib: Import a single file
+## 1.5.7. tlib: Import a single file
 
 A file stands for a module. By importing a module we get a value of ``tlib``.
 
@@ -208,7 +206,7 @@ Note that modules cannot be imported by each other, causing the looping-importin
 
 <br>
 
-## tlib: How to import a folder?
+## 1.5.8. tlib: How to import a folder?
 
 If your modules are put under a folder where there is a file ``__init__.tap``, then Tapas also supports to "import" a folder. For example, let us say currently your folder has the structure
 
