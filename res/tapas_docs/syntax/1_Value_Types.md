@@ -1,3 +1,9 @@
+---
+layout: display
+---
+
+
+
 # 1.1. Value Types
 
 Generally, there are two types in Tap, ``value type`` and ``composite type``. Consistent with other popular programming languages with virtual machines (such as Java or Python), object of value types contains specific values.
