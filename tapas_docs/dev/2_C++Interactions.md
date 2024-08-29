@@ -1,6 +1,12 @@
-# 2.2. C++ Interaction
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
 
-<br>
+
+
+# 2.2. C++ Interaction
 
 ## 2.2.1. Calling Tapas in C++
 

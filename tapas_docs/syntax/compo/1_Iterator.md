@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
+
+
+
 # 1.6.1. Iterator
 
 Iterator can be created by operator ``to`` or by function ``toiter``.

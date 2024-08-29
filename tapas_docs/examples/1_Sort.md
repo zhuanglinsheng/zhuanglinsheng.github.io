@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
+
+
+
 # 3.1. Sort
 
 The first notice is about passing parameters of functions. If you pass an object of composite type into function, then any changes on this parameter would also affect the outer object. This is because parameters passing follows the shallow copy rule with only the reference counter of the object increases by one and its entity (in a heap block) not copied. List sorting is a good example to illustrate this notice.

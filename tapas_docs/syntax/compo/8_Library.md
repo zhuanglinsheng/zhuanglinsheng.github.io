@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
+
+
+
 # 1.6.8. Library
 
 Library is the module type in Tapas. It is created by ``import`` statement.

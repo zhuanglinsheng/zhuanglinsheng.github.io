@@ -25,6 +25,6 @@ My research interest is broad, including stochastic modeling, optimization theor
 ## Hobbies
 
 - Occasionally I write [blogs]({{ site.url }}/res/blogs.html) as a record of my study.
-- Recently I learned to write poems to get some relax.
+- Recently I learned to write [poems]({{ site.url }}/res/poems.html) to get some relax.
 
 <br>

@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
+
+
+
 # 1.6.7. Array
 
 We use C++ ``eigen`` package for the implementation of 2 dimensional array. (n dimensional tensors are

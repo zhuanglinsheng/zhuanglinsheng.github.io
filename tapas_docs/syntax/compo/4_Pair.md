@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
+
+
+
 # 1.6.4. Pair
 
 Pair is the binary tuple in Tape. It is created by the operator colon `:`. It is used to

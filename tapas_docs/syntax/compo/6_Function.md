@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Tapas Programming Language"
+use_math: false
+---
+
+
+
 # 1.6.6. Function
 
 Function is defined by the combination of parentheses and curly braces ``() {}``. Parameters are listed in
