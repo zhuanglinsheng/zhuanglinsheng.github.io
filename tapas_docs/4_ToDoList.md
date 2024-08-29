@@ -8,5 +8,5 @@ use_math: false
 
 # 4. To Do List
 
-
+- A complete type system.
 
