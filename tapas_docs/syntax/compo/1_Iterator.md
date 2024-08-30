@@ -8,7 +8,7 @@ use_math: false
 
 # 1.6.1. Iterator
 
-Iterator can be created by operator ``to`` or by function ``toiter``.
+Iterator can be created by operator ``to`` or by function ``std::toiter``.
 
 <br>
 

@@ -8,9 +8,11 @@ use_math: false
 
 # 1.2. Operators
 
+
+
 ## 1.2.1. Arithmetic Operator
 
-Including ``+``,  ``-``,  ``*``,  ``/``,  ``%``,  ``^``.
+Including ``+``,  ``-``,  ``*``,  ``/``,  ``%``, `@` and  ``^``.
 
 ```tapas
 2.3 + 4 / 3.0 * 2^2
@@ -23,7 +25,9 @@ Including ``+``,  ``-``,  ``*``,  ``/``,  ``%``,  ``^``.
 
 ## 1.2.2. Logical Operators (1st level)
 
-Including ``>``, ``<``, ``>=``,  ``<=``,  ``==``,  ``!=``.
+There are two layers of logical operators
+
+- 1st layer Includes ``>``, ``<``, ``>=``,  ``<=``,  ``==``,  ``!=``.
 
 ```tapas
 5 >= 5.0
@@ -31,19 +35,16 @@ Including ``>``, ``<``, ``>=``,  ``<=``,  ``==``,  ``!=``.
 <pre class='Tapas-Return'>
 true
 </pre>
+- 2nd layer includes ``and``, ``or``, ``in``.
 
-<br>
-
-## 1.2.3. Logical Operators (2nd level)
-
-Including ``and``, ``or``, ``in``.
-
-```tapas
+```
 5 > 4 and (4 in [0,1,2,3,4]) or 3 > 6.0
 ```
+
 <pre class='Tapas-Return'>
 true
 </pre>
+
 <br>
 
 ## 1.2.4. Operator `to`

@@ -8,5 +8,5 @@ use_math: false
 
 # 4. To Do List
 
-- A complete type system.
+[1.7. Composite Types](./syntax/7_TypeSystem.html). 
 
