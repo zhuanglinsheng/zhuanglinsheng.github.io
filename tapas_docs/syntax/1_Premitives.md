@@ -6,24 +6,24 @@ use_math: false
 
 
 
-# 1.1. Value Types
+# 1.1. Primitive Types
 
-Generally, there are two types in Tap, ``value type`` and ``composite type``. Consistent with other popular programming languages with virtual machines (such as Java or Python), object of value types contains specific values.
+Generally, there are two kind of primitive types in Tap, ``value type`` and ``composite type``. 
+
+Consistent with other popular programming languages with virtual machines (such as Java), object of value types refers to specific values while composite types refers to a pointer.
 
 <br>
 
 ## 1.1.1. Nil
 
-A value of nil means null, empty or nothing. Nil cannot be explicitly created by users.
+A value of `nil` means null, empty or nothing. Nil cannot be explicitly created by users.
 
 ```tapas
-std::print('The return of function "print" is a nil
-whose type code is:').std::type()
+std::print('The return of function "print" is a nil whose type is:').std::type()
 ```
 <pre class='Tapas-Return'>
-The return of function "print" is a nil
-whose type code is:
-0
+The return of function "print" is a nil whose type code is:
+nil
 </pre>
 
 <br>
@@ -35,12 +35,14 @@ A boolean value could be either `true` or `false`. They can be obtained by liter
 ```tapas
 false
 true
-false or true
+true and false or true
 ```
 <pre class='Tapas-Return'>
 true
 false
+true
 </pre>
+
 
 or by logical operations
 

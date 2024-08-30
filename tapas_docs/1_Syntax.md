@@ -8,7 +8,7 @@ use_math: false
 
 # 1. Syntax
 
-[1.1. Value Types](./syntax/1_Value_Types.html). 
+[1.1. Primitives Types](./syntax/1_Primitives.html). 
 
 [1.2. Operators](./syntax/2_Operators.html).
 
