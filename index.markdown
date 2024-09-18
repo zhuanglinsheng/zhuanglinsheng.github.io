@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 
@@ -18,6 +15,10 @@ I graduated from Peking University School of Economics in 2017 and got a Master'
 ## Research Interests
 
 My research interest is broad, including stochastic modeling, optimization theory and algorithms.
+
+## Paper
+
+Zhuang, Linsheng and Chen, Zhi and Keppo, Jussi, The Impact of Tie Intervals on Rank-Based Contests (August 19, 2024). Available at SSRN: [https://ssrn.com/abstract=4930136](https://ssrn.com/abstract=4930136). 
 
 ## Contact
 
