@@ -3,11 +3,11 @@ layout: default
 ---
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="flex: 1; text-align: center;">
+  <div style="flex: 1; text-align: left;">
     <!-- 图片部分 -->
     <img title="2020" alt="Alt text" src="assets/img/Me.jpg" style="width:270px;">
   </div>
-  <div style="flex: 1; padding-left: 10px;">
+  <div style="flex: 1; text-align: left; padding-left: 10px;">
     <!-- 文字部分 -->
     <p>
       庄麟升，字明瑞，楚之夷陵人也。号纸檀居士，斋署星霜阁。
