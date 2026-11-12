@@ -34,9 +34,11 @@ degree in Economics from Peking University.
 
 My research interest is broad, including stochastic modeling, optimization theory and algorithms.
 
-## Paper
+## Papers
 
-Zhuang, Linsheng and Chen, Zhi and Keppo, Jussi, The Impact of Tie Intervals on Rank-Based Contests (August 19, 2024). Available at SSRN: [https://ssrn.com/abstract=4930136](https://ssrn.com/abstract=4930136).
+Zhuang, Linsheng and Keppo, Jussi, Bayesian Structural Inference for Dynamic Crowdsourcing Contests (Nov 12, 2026). Available at  [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7695219). Submitted to *Management Science*.
+
+Zhuang, Linsheng and Chen, Zhi and Keppo, Jussi, The Impact of Tie Intervals on Rank-Based Contests (Aug 19, 2024). Available at [SSRN](https://ssrn.com/abstract=4930136). 
 
 ## Contact
 
